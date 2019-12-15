@@ -17,10 +17,9 @@ class _SplashPageState extends State<SplashPage> {
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-                Colors.white,
-                Colors.white,
+                Colors.red,
+                Color(0xff680011),
               ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-              // color: Color(0xFF005897),
             ),
           ),
           Column(
@@ -28,12 +27,16 @@ class _SplashPageState extends State<SplashPage> {
             children: <Widget>[
               SizedBox(
                 height: 300,
-                child: LogoIcon()
+                child: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 100,
+                  child: LogoIcon(),
+                ),
                 ),
               Text(
                 "Renal Care",
                 style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 24.0),
               ),
@@ -73,7 +76,7 @@ class LogoIcon extends StatelessWidget {
       image: logoImage,
     );
     return Container(
-      child: image,
+      child: image, height: 200,
     );
   }
 }

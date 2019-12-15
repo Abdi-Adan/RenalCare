@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_walkthrough/flutter_walkthrough.dart';
 import 'package:flutter_walkthrough/walkthrough.dart';
-import 'package:renalcare/root.dart';
+import 'package:renalcare/SignIn/LoginPage.dart';
 
 class WalkthroughScreen extends StatelessWidget {
 
@@ -13,7 +13,7 @@ class WalkthroughScreen extends StatelessWidget {
     ),
     Walkthrough(
       title: "Lifestyle",
-      content: "Habits you need to adapt, the dos and donts",
+      content: "Habits you need to adapt, the dos \nand donts",
       imageIcon: Icons.fastfood,
     ),
     Walkthrough(
@@ -33,7 +33,7 @@ class WalkthroughScreen extends StatelessWidget {
     //here we need to pass the list and the route for the next page to be opened after this.
     return new IntroScreen(
       list,
-      new MaterialPageRoute(builder: (context) => new MyControlScreen()),
+      new MaterialPageRoute(builder: (context) => new LoginPage()),
     );
   }
 }
@@ -64,7 +64,7 @@ class ContinueWithGoogle extends StatelessWidget {
           ],
         ),
         onPressed: ()  {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => new MyControlScreen()),);
+          Navigator.push(context, MaterialPageRoute(builder: (context) => new LoginPage()),);
         },
       );
   }
