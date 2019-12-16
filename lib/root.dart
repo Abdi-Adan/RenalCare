@@ -107,7 +107,7 @@ class _MyControlScreenState extends State<MyControlScreen> {
                     shape: BoxShape.circle,
                     gradient: LinearGradient(colors: [
                       Color(0xff680011),
-                      Colors.deepPurple,
+                      Colors.redAccent,
                     ]),
                   ),
                   child: CircleAvatar(
@@ -125,25 +125,12 @@ class _MyControlScreenState extends State<MyControlScreen> {
                 SizedBox(
                   height: 5.0,
                 ),
-                Text(
-                  "Ken Ochieng'",
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-                Text(
-                  "kenochieng@gmail.com",
-                  style: TextStyle(color: Colors.redAccent, fontSize: 16.0),
-                ),
                 SizedBox(
                   height: 30,
                 ),
-                buildRow(Icons.home, "Home"),
-                Divider(),
-                buildRow(Icons.person_pin, "Your Profile"),
-                Divider(),
-                buildRow(Icons.email, "Contacts"),
-                Divider(),
-                buildRow(Icons.info_outline, "help"),
-                Divider(),
+                buildRow(Icon(Icons.home), "Name", "Ken Ochieng"),
+                buildRow(Icon(Icons.person_pin), "Email", "kenochieng@gmail.com"),
+                buildRow(Icon(Icons.phone), "Contacts Us", "Our Hospitals"),
               ],
             ),
           ),
@@ -152,87 +139,30 @@ class _MyControlScreenState extends State<MyControlScreen> {
     );
   }
 
-  Widget buildRow(IconData icon, String title) {
+  Widget buildRow(Icon icon, String title, String subtitle) {
     final TextStyle tStyle = TextStyle(color: Colors.white, fontSize: 16.0);
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Row(
-        children: <Widget>[
-          Icon(
-            icon,
-            color: Colors.white,
+    return InkWell(
+      splashColor: Colors.redAccent,
+      onTap: () {},
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
+        child: InkWell(
+          splashColor: Colors.redAccent,
+          onTap: () {},
+          child: Card(
+            elevation: 5.0,
+            child: ListTile(
+              leading: icon,
+              title: Text(
+                title,
+                style: tStyle,
+              ),
+              subtitle: Text(subtitle),
+            ),
           ),
-          SizedBox(
-            width: 10.0,
-          ),
-          Text(
-            title,
-            style: tStyle,
-          ),
-        ],
+        ),
       ),
     );
   }
 }
 
-// class MyDrawer extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Drawer(
-//       child: ListView(
-//         children: <Widget>[
-//           DrawerHeader(
-//               decoration: BoxDecoration(
-//                 color: Colors.red,
-//               ),
-//               child: CircleAvatar(
-//                 backgroundColor: Colors.redAccent,
-//                 radius: 40,
-//                 child: Text(
-//                   "K",
-//                   style: TextStyle(
-//                     color: Colors.white,
-//                     fontSize: 80.0,
-//                   ),
-//                 ),
-//               )),
-//           InkWell(
-//             splashColor: Colors.deepOrange,
-//             child: ListTile(
-//               title: Text("Name"),
-//               subtitle: Text('Clinton Sang'),
-//               trailing: Icon(Icons.perm_contact_calendar),
-//               onTap: () {},
-//             ),
-//           ),
-//           InkWell(
-//             splashColor: Colors.deepOrange,
-//             child: ListTile(
-//               title: Text("ID"),
-//               subtitle: Text("37177280"),
-//               trailing: Icon(Icons.calendar_view_day),
-//               onTap: () {},
-//             ),
-//           ),
-//           InkWell(
-//             splashColor: Colors.deepOrange,
-//             child: ListTile(
-//               title: Text("Phone Number"),
-//               subtitle: Text("+254723073552"),
-//               trailing: Icon(Icons.phone),
-//               onTap: () {},
-//             ),
-//           ),
-//           InkWell(
-//             splashColor: Colors.deepOrange,
-//             child: ListTile(
-//               title: Text("LogOut"),
-//               trailing: Icon(Icons.lock),
-//               onTap: () {},
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }

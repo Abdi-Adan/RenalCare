@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:renalcare/root.dart';
 
-import '../SplashScreen.dart';
-
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -51,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(
                         height: 10,
                       ),
-                      LogoIcon(),
+                      Icon(Icons.fastfood),
                       SizedBox(
                         height: 20,
                       ),
@@ -69,8 +67,8 @@ class _LoginPageState extends State<LoginPage> {
                   height: 300,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(colors: [
-                    Color(0x44ff3a5a),
-                    Color(0x44fe494d),
+                    Color(0xffff3a5a),
+                    Color(0xfffe494d),
                   ])),
                 ),
               ),
@@ -84,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                   borderRadius: BorderRadius.all(Radius.circular(30)),
                   child: TextField(
                     onChanged: (String value) {},
-                    cursorColor: Colors.deepOrange,
+                    cursorColor: Colors.red,
                     decoration: InputDecoration(
                         hintText: "Email",
                         prefixIcon: Material(
@@ -119,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
                           elevation: 0,
                           borderRadius: BorderRadius.all(Radius.circular(30)),
                           child: Icon(
-                            Icons.email,
+                            Icons.lock,
                             color: Colors.red,
                           ),
                         ),
