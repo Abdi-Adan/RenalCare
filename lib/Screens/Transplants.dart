@@ -10,7 +10,7 @@ class _TransplantsState extends State<Transplants> {
       TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20);
   final TextStyle sStyle = TextStyle(
       color: Colors.black, fontWeight: FontWeight.normal, fontSize: 16);
-  String image = "assets/google.png";
+  String image = "assets/foods/transplantbanner.jpg";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

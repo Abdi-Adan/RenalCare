@@ -129,7 +129,8 @@ class _MyControlScreenState extends State<MyControlScreen> {
                   height: 30,
                 ),
                 buildRow(Icon(Icons.home), "Name", "Ken Ochieng"),
-                buildRow(Icon(Icons.person_pin), "Email", "kenochieng@gmail.com"),
+                buildRow(
+                    Icon(Icons.person_pin), "Email", "kenochieng@gmail.com"),
                 buildRow(Icon(Icons.phone), "Contacts Us", "Our Hospitals"),
               ],
             ),
@@ -165,4 +166,3 @@ class _MyControlScreenState extends State<MyControlScreen> {
     );
   }
 }
-
