@@ -9,15 +9,14 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarBrightness: Brightness.dark,
-        statusBarIconBrightness: Brightness.dark,
-        statusBarColor: Colors.red));
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.red));
     return MaterialApp(
       title: 'Renal Care',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.red,
+        accentColor: Colors.redAccent,
       ),
       home: SplashPage(),
       routes: <String, WidgetBuilder>{

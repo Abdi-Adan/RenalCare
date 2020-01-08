@@ -22,6 +22,12 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Colors.white,
       resizeToAvoidBottomPadding: true,
       appBar: new AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back, color: Colors.black,),
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         actions: <Widget>[
@@ -110,58 +116,50 @@ class _LoginPageState extends State<LoginPage> {
               new Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new SizedBox(
-                    height: 50,
-                    width: 165,
-                    child: new OutlineButton(
-                      child: new Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          new Icon(
-                            FontAwesomeIcons.google,
-                            size: 20,
-                            color: Colors.red,
-                          ),
-                          new SizedBox(
-                            width: 5,
-                          ),
-                          new Text("Google",
-                              style: new TextStyle(color: Colors.red)),
-                        ],
-                      ),
-                      shape: StadiumBorder(),
-                      highlightedBorderColor: Colors.red,
-                      borderSide: BorderSide(color: Colors.red),
-                      onPressed: () {},
+                  new OutlineButton(
+                    child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        new Icon(
+                          FontAwesomeIcons.google,
+                          size: 20,
+                          color: Colors.red,
+                        ),
+                        new SizedBox(
+                          width: 5,
+                        ),
+                        new Text("Google",
+                            style: new TextStyle(color: Colors.red)),
+                      ],
                     ),
+                    shape: StadiumBorder(),
+                    highlightedBorderColor: Colors.red,
+                    borderSide: BorderSide(color: Colors.red),
+                    onPressed: () {},
                   ),
                   new SizedBox(
                     width: 20,
                   ),
-                  new SizedBox(
-                    height: 50,
-                    width: 165,
-                    child: new OutlineButton(
-                      child: new Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          new Icon(
-                            FontAwesomeIcons.facebookF,
-                            size: 20,
-                            color: Colors.blueAccent,
-                          ),
-                          new SizedBox(
-                            width: 5,
-                          ),
-                          new Text("Facebook",
-                              style: new TextStyle(color: Colors.blueAccent)),
-                        ],
-                      ),
-                      shape: StadiumBorder(),
-                      highlightedBorderColor: Colors.blueAccent,
-                      borderSide: BorderSide(color: Colors.blueAccent),
-                      onPressed: () {},
+                  new OutlineButton(
+                    child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        new Icon(
+                          FontAwesomeIcons.facebookF,
+                          size: 20,
+                          color: Colors.blueAccent,
+                        ),
+                        new SizedBox(
+                          width: 5,
+                        ),
+                        new Text("Facebook",
+                            style: new TextStyle(color: Colors.blueAccent)),
+                      ],
                     ),
+                    shape: StadiumBorder(),
+                    highlightedBorderColor: Colors.blueAccent,
+                    borderSide: BorderSide(color: Colors.blueAccent),
+                    onPressed: () {},
                   ),
                 ],
               ),
