@@ -26,6 +26,7 @@ dependencies:
   curved_navigation_bar: ^0.3.1
   flutter_walkthrough:
   flutter_custom_clippers: ^1.1.0
+  font_awesome_flutter: ^8.5.0
 
 dev_dependencies:
   flutter_test:

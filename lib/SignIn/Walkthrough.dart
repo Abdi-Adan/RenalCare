@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_walkthrough/flutter_walkthrough.dart';
 import 'package:flutter_walkthrough/walkthrough.dart';
 import 'package:renalcare/SignIn/LoginPage.dart';
+import 'package:renalcare/SignIn/SignIn.dart';
 
 class WalkthroughScreen extends StatelessWidget {
 
@@ -64,7 +65,7 @@ class ContinueWithGoogle extends StatelessWidget {
           ],
         ),
         onPressed: ()  {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => new LoginPage()),);
+          Navigator.push(context, MaterialPageRoute(builder: (context) => new SignUp()),);
         },
       );
   }

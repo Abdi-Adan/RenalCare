@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:renalcare/SignIn/LoginPage.dart';
 import 'package:renalcare/root.dart';
 
-class LoginPage extends StatefulWidget {
+class SignUp extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpState extends State<SignUp> {
   bool eye = true;
 
   void _toggle() {
@@ -21,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       resizeToAvoidBottomPadding: true,
-      appBar: new AppBar(
+      appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         actions: <Widget>[
@@ -29,11 +30,14 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.fromLTRB(0, 15, 20, 0),
             child: new FlatButton(
               child: new Text(
-                "Sign up",
+                "Log In",
                 style: new TextStyle(color: Colors.grey, fontSize: 17),
               ),
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
               },
               highlightColor: Colors.red,
               shape: StadiumBorder(),
@@ -41,14 +45,14 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ],
       ),
-      body: new SingleChildScrollView(
-        child: new Container(
+      body: SingleChildScrollView(
+        child: Container(
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
           child: new Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               new Text(
-                "Log in",
+                "Sign up",
                 style: new TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
               ),
               new SizedBox(
@@ -57,9 +61,20 @@ class _LoginPageState extends State<LoginPage> {
               new TextField(
                 keyboardType: TextInputType.emailAddress,
                 autocorrect: false,
+                decoration: InputDecoration(
+                  hintText: "Enter Email",
+                  labelText: "Email",
+                ),
+              ),
+              new SizedBox(
+                height: 30,
+              ),
+              new TextField(
+                keyboardType: TextInputType.text,
+                autocorrect: false,
                 decoration: new InputDecoration(
                   // hintText: "Email",
-                  labelText: "Email",
+                  labelText: "Name",
                 ),
               ),
               new SizedBox(
@@ -85,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
               new SizedBox(
                 height: 50,
                 child: new RaisedButton(
-                  child: new Text("Log in",
+                  child: new Text("Sign up",
                       style: new TextStyle(color: Colors.white)),
                   color: Colors.red,
                   elevation: 15.0,
@@ -103,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
               new Container(
                 padding: const EdgeInsets.fromLTRB(0, 30, 0, 30),
                 child: new Text(
-                  "Or sign in with social account",
+                  "Or sign up with another account",
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -165,8 +180,33 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
+              new SizedBox(height: 60),
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Text("By signing up you agree to our "),
+                  new GestureDetector(
+                      child: Text("Terms of Use",
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                          )),
+                      onTap: () {})
+                ],
+              ),
               new SizedBox(
-                height: 20,
+                height: 5,
+              ),
+              new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  new Text("and "),
+                  new GestureDetector(
+                      child: Text("Privacy Policy",
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                          )),
+                      onTap: () {}),
+                ],
               ),
             ],
           ),
