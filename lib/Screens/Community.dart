@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
 
+import 'Stories.dart';
+
 class Community extends StatefulWidget {
   @override
   _CommunityState createState() => _CommunityState();
@@ -14,14 +16,32 @@ class _CommunityState extends State<Community> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            _thumbStack("assets/foods/blueberries.jpg", "Transplants",
-                "As a child, I always...", 'https://www.youtube.com/watch?v=aCEDwQ1Y4Mw'),
-            _thumbStack("assets/foods/transplantbanner.jpg", "Transplants",
-                "As a child, I always...", 'https://www.youtube.com/watch?v=aCEDwQ1Y4Mw'),
-            _thumbStack("assets/foods/transplantbanner.jpg", "Transplants",
-                "As a child, I always...", 'https://www.youtube.com/watch?v=aCEDwQ1Y4Mw'),
-            _thumbStack("assets/foods/transplantbanner.jpg", "Transplants",
-                "As a child, I always...", 'https://www.youtube.com/watch?v=aCEDwQ1Y4Mw'),
+            _thumbStack(
+              'https://www.youtube.com/watch?v=aCEDwQ1Y4Mw',
+              "assets/foods/blueberries.jpg",
+              "Transplants",
+              "As a child, I always...",
+            ),
+            _thumbStack(
+              'https://www.youtube.com/watch?v=aCEDwQ1Y4Mw',
+              "assets/foods/transplantbanner.jpg",
+              "Transplants",
+              "As a child, I always...",
+            ),
+            _thumbStack(
+              'https://www.youtube.com/watch?v=aCEDwQ1Y4Mw',
+              "assets/foods/transplantbanner.jpg",
+              "Transplants",
+              "As a child, I always...",
+            ),
+            _thumbStack(
+              'https://www.youtube.com/watch?v=aCEDwQ1Y4Mw',
+              "assets/foods/transplantbanner.jpg",
+              "Transplants",
+              "As a child, I always...",
+            ),
+            _buildStoryItem('Persona Stroy', 'Why me? Why now?', ''),
+            _buildStoryItem("Agnes' Stroy", 'Why me? Why now?', ''),
           ],
         ),
       ),
@@ -30,7 +50,7 @@ class _CommunityState extends State<Community> {
 
   Widget _thumbStack(
     String url,
-    String imgString,
+    String imgPath,
     String videoName,
     String subDes,
   ) {
@@ -41,7 +61,7 @@ class _CommunityState extends State<Community> {
       },
       child: Padding(
         padding: EdgeInsets.symmetric(
-          vertical: 10,
+          vertical: 10, horizontal: 10
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +74,7 @@ class _CommunityState extends State<Community> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.fill,
-                  image: AssetImage(imgString),
+                  image: AssetImage(imgPath),
                 ),
                 color: Colors.red,
                 borderRadius: BorderRadius.only(
@@ -87,8 +107,30 @@ class _CommunityState extends State<Community> {
     String url;
     if (await canLaunch(url)) {
       await launch(url, forceSafariVC: true, forceWebView: true);
-    }else{
+    } else {
       throw 'Could not launch $url';
     }
+  }
+
+  Widget _buildStoryItem(String titlE, String storyDetails, String subDetails) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      child: InkWell(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => Stories(
+                    title: titlE,
+                    storyDetails: storyDetails,
+                  )));
+        },
+        child: Card(
+          elevation: 5.0,
+          child: ListTile(
+            title: Text(titlE),
+            subtitle: Text(subDetails),
+          ),
+        ),
+      ),
+    );
   }
 }

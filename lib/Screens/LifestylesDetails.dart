@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class DetailsPage extends StatefulWidget {
-  final heroTag;
-  final foodName;
-  final foodPrice;
+  final String heroTag;
+  final String foodName;
+  final String foodPrice;
+  final List<String>infoCard;
+  final String des;
 
-  DetailsPage({this.heroTag, this.foodName, this.foodPrice});
+  DetailsPage({this.heroTag, this.foodName, this.foodPrice, this.infoCard, this.des});
 
   @override
   _DetailsPageState createState() => _DetailsPageState();
 }
 
 class _DetailsPageState extends State<DetailsPage> {
-  var selectedCard = 'WEIGHT';
-
+  var selectedCard = 'SODIUM';
+  Color color = Colors.cyan;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,18 +91,18 @@ class _DetailsPageState extends State<DetailsPage> {
                                     fontWeight: FontWeight.bold)),
                             SizedBox(height: 20.0),
                             Text(
-                                "Renal Disease is a progressive loss in renal function over a period of time. The organ affected here are the Kidneys. This condition is also knowna as Renal Chronic Disease (CKD). Renal Disease is a progressive loss in renal function over a period of time. The organ affected here are the Kidneys. This condition is also knowna as Renal Chronic Disease (CKD)."),
+                                widget.des),
                             SizedBox(height: 20.0),
                             Container(
                                 height: 150.0,
                                 child: ListView(
                                   scrollDirection: Axis.horizontal,
                                   children: <Widget>[
-                                    _buildInfoCard('WEIGHT', '300', 'G'),
+                                    _buildInfoCard( widget.infoCard[0], widget.infoCard[1], widget.infoCard[2]),
                                     SizedBox(width: 10.0),
-                                    _buildInfoCard('CALORIES', '267', 'CAL'),
+                                    _buildInfoCard(widget.infoCard[3], widget.infoCard[4], widget.infoCard[5]),
                                     SizedBox(width: 10.0),
-                                    _buildInfoCard('VITAMINS', 'A, B6', 'VIT'),
+                                    _buildInfoCard(widget.infoCard[6], widget.infoCard[7], widget.infoCard[8]),
                                   ],
                                 )),
                             SizedBox(height: 20.0),
@@ -124,7 +126,7 @@ class _DetailsPageState extends State<DetailsPage> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
               color:
-                  cardTitle == selectedCard ? Color(0xff680011) : Colors.white,
+                  cardTitle == selectedCard ? Color(0xff9595) : Colors.white,
               border: Border.all(
                   color: cardTitle == selectedCard
                       ? Colors.transparent

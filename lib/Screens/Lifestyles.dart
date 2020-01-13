@@ -8,10 +8,11 @@ class LifeStyles extends StatefulWidget {
 }
 
 class _LifeStylesState extends State<LifeStyles> {
+  Color color = Colors.cyan;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: color,
       body: ListView(
         children: <Widget>[
           SizedBox(height: 25.0),
@@ -25,7 +26,7 @@ class _LifeStylesState extends State<LifeStyles> {
                         fontWeight: FontWeight.bold,
                         fontSize: 25.0)),
                 SizedBox(width: 10.0),
-                Text('Food',
+                Text('Nutrition',
                     style: TextStyle(color: Colors.white, fontSize: 25.0))
               ],
             ),
@@ -47,27 +48,27 @@ class _LifeStylesState extends State<LifeStyles> {
                         height: MediaQuery.of(context).size.height - 300.0,
                         child: ListView(children: [
                           _buildFoodItem('assets/plate1.png', 'Blue Berries',
-                              'are packed with...'),
+                              'are packed with...', [], ''),
                           _buildFoodItem('assets/plate2.png', 'Red Grapes',
-                              'they deliver a ton...'),
+                              'they deliver a ton...', [], ''),
                           _buildFoodItem('assets/plate6.png', 'Egg Whites',
-                              'provide a high quality...'),
+                              'provide a high quality...', [], ''),
                           _buildFoodItem('assets/plate5.png', 'Garlic',
-                              'a good source of...'),
+                              'a good source of...', [], ''),
                           _buildFoodItem('assets/foods/oliveoil.jpg', 'Olive Oil',
-                              ' healthy source of fat...'),
+                              ' healthy source of fat...', [], ''),
                           _buildFoodItem('assets/foods/cabage.jpg.png', 'Cabbage',
-                              'belongs to the...'),
+                              'belongs to the...', [], ''),
                           _buildFoodItem(
                               'assets/foods/blueberries.jpg',
                               'Skinless Chicken',
-                              'skinless chicken...'),
+                              'skinless chicken...', [], ''),
                           _buildFoodItem('assets/foods/onions.jpg', 'Onions',
-                              'excellent for providing..'),
+                              'excellent for providing..', [], ''),
                           _buildFoodItem('assets/foods/macademianuts.jpg', 'Macademia Nuts',
-                              'They are delicious and...'),
+                              'They are delicious and...', [], ''),
                           _buildFoodItem('assets/foods/pineapples.jpg', 'Pineapple',
-                              'pineapple makes...')
+                              'pineapple makes...', [], '')
                         ]))),
               ],
             ),
@@ -81,6 +82,8 @@ class _LifeStylesState extends State<LifeStyles> {
     String imgPath,
     String foodName,
     String sub,
+    List infoCard,
+    String des,
   ) {
     return Padding(
         padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
@@ -88,7 +91,7 @@ class _LifeStylesState extends State<LifeStyles> {
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => DetailsPage(
-                      heroTag: imgPath, foodName: foodName, foodPrice: sub)));
+                      heroTag: imgPath, foodName: foodName, foodPrice: sub, infoCard: infoCard)));
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -116,7 +119,7 @@ class _LifeStylesState extends State<LifeStyles> {
                 ])),
                 IconButton(
                     icon: Icon(Icons.launch),
-                    color: Colors.red,
+                    color: color,
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => DetailsPage(

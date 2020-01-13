@@ -33,7 +33,7 @@ class _MyControlScreenState extends State<MyControlScreen> {
           "Renal Kidney Disease",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.cyan,
       ),
       drawer: buildDrawer(),
       body: _screens[_page],
@@ -63,8 +63,8 @@ class _MyControlScreenState extends State<MyControlScreen> {
             color: Colors.white,
           ),
         ],
-        color: Colors.red,
-        buttonBackgroundColor: Color(0xff680011),
+        color: Color(0xfff8f8),
+        buttonBackgroundColor: Color(0xff9595),
         backgroundColor: Colors.transparent,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
@@ -90,16 +90,6 @@ buildDrawer() {
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                Container(
-                  alignment: Alignment.centerRight,
-                  child: IconButton(
-                    icon: Icon(
-                      Icons.power_settings_new,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
                 Container(
                   height: 90,
                   alignment: Alignment.center,
@@ -129,21 +119,13 @@ buildDrawer() {
                   "Ken Ochieng'",
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
-                Text(
-                  "kenochieng@gmail.com",
-                  style: TextStyle(color: Colors.redAccent, fontSize: 16.0),
-                ),
                 SizedBox(
                   height: 30,
                 ),
-                buildRow(Icons.home, "Home"),
+                buildRow(Icons.email, "email", ''),
                 Divider(),
-                buildRow(Icons.person_pin, "Your Profile"),
-                Divider(),
-                buildRow(Icons.email, "Contacts"),
-                Divider(),
-                buildRow(Icons.info_outline, "help"),
-                Divider(),
+                buildRow(Icons.power_settings_new, "Your Profile", ''),
+                SizedBox(height: 10,)
               ],
             ),
           ),
@@ -152,8 +134,9 @@ buildDrawer() {
     );
   }
 
-  Widget buildRow(IconData icon, String title) {
+  Widget buildRow(IconData icon, String title, String subtitle) {
     final TextStyle tStyle = TextStyle(color: Colors.white, fontSize: 16.0);
+    final TextStyle subStyle = TextStyle(color: Colors.white, fontSize: 14.0);
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
@@ -165,9 +148,18 @@ buildDrawer() {
           SizedBox(
             width: 10.0,
           ),
-          Text(
-            title,
-            style: tStyle,
+          Column(
+            children: <Widget>[
+              Text(
+                title,
+                style: tStyle,
+              ),
+              SizedBox(height: 3,),
+              Text(
+                subtitle,
+                style: subStyle,
+              ),
+            ],
           ),
         ],
       ),

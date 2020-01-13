@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:renalcare/SignIn/LoginPage.dart';
 import 'package:renalcare/root.dart';
 
@@ -56,7 +55,7 @@ class _SignUpState extends State<SignUp> {
                 style: new TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
               ),
               new SizedBox(
-                height: 70,
+                height: 40,
               ),
               new TextField(
                 keyboardType: TextInputType.emailAddress,
@@ -67,7 +66,7 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
               new SizedBox(
-                height: 30,
+                height: 20,
               ),
               new TextField(
                 keyboardType: TextInputType.text,
@@ -102,7 +101,7 @@ class _SignUpState extends State<SignUp> {
                 child: new RaisedButton(
                   child: new Text("Sign up",
                       style: new TextStyle(color: Colors.white)),
-                  color: Colors.red,
+                  color: Colors.cyan,
                   elevation: 15.0,
                   shape: StadiumBorder(),
                   splashColor: Colors.redAccent,
@@ -115,92 +114,6 @@ class _SignUpState extends State<SignUp> {
                   },
                 ),
               ),
-              new Container(
-                padding: const EdgeInsets.fromLTRB(0, 30, 0, 30),
-                child: new Text(
-                  "Or sign up with another account",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new OutlineButton(
-                    child: new Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        new Icon(
-                          FontAwesomeIcons.google,
-                          size: 20,
-                          color: Colors.red,
-                        ),
-                        new SizedBox(
-                          width: 5,
-                        ),
-                        new Text("Google",
-                            style: new TextStyle(color: Colors.red)),
-                      ],
-                    ),
-                    shape: StadiumBorder(),
-                    highlightedBorderColor: Colors.red,
-                    borderSide: BorderSide(color: Colors.red),
-                    onPressed: () {},
-                  ),
-                  new SizedBox(
-                    width: 20,
-                  ),
-                  new OutlineButton(
-                    child: new Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        new Icon(
-                          FontAwesomeIcons.facebookF,
-                          size: 20,
-                          color: Colors.blueAccent,
-                        ),
-                        new SizedBox(
-                          width: 5,
-                        ),
-                        new Text("Facebook",
-                            style: new TextStyle(color: Colors.blueAccent)),
-                      ],
-                    ),
-                    shape: StadiumBorder(),
-                    highlightedBorderColor: Colors.blueAccent,
-                    borderSide: BorderSide(color: Colors.blueAccent),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-              SizedBox(height: 30),
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Text("By signing up you agree to our "),
-                  new GestureDetector(
-                      child: Text("Terms of Use",
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                          )),
-                      onTap: () {})
-                ],
-              ),
-              new SizedBox(
-                height: 5,
-              ),
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Text("and "),
-                  new GestureDetector(
-                      child: Text("Privacy Policy",
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                          )),
-                      onTap: () {}),
-                ],
-              ),
-              SizedBox(height: 30),
             ],
           ),
         ),

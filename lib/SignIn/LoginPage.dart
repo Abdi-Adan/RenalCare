@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:renalcare/root.dart';
 
 class LoginPage extends StatefulWidget {
@@ -93,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: new RaisedButton(
                   child: new Text("Log in",
                       style: new TextStyle(color: Colors.white)),
-                  color: Colors.red,
+                  color: Colors.cyan,
                   elevation: 15.0,
                   shape: StadiumBorder(),
                   splashColor: Colors.redAccent,
@@ -105,66 +104,6 @@ class _LoginPageState extends State<LoginPage> {
                                 MyControlScreen()));
                   },
                 ),
-              ),
-              new Container(
-                padding: const EdgeInsets.fromLTRB(0, 30, 0, 30),
-                child: new Text(
-                  "Or sign in with social account",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new OutlineButton(
-                    child: new Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        new Icon(
-                          FontAwesomeIcons.google,
-                          size: 20,
-                          color: Colors.red,
-                        ),
-                        new SizedBox(
-                          width: 5,
-                        ),
-                        new Text("Google",
-                            style: new TextStyle(color: Colors.red)),
-                      ],
-                    ),
-                    shape: StadiumBorder(),
-                    highlightedBorderColor: Colors.red,
-                    borderSide: BorderSide(color: Colors.red),
-                    onPressed: () {},
-                  ),
-                  new SizedBox(
-                    width: 20,
-                  ),
-                  new OutlineButton(
-                    child: new Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        new Icon(
-                          FontAwesomeIcons.facebookF,
-                          size: 20,
-                          color: Colors.blueAccent,
-                        ),
-                        new SizedBox(
-                          width: 5,
-                        ),
-                        new Text("Facebook",
-                            style: new TextStyle(color: Colors.blueAccent)),
-                      ],
-                    ),
-                    shape: StadiumBorder(),
-                    highlightedBorderColor: Colors.blueAccent,
-                    borderSide: BorderSide(color: Colors.blueAccent),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-              new SizedBox(
-                height: 20,
               ),
             ],
           ),

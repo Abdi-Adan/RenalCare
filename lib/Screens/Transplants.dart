@@ -35,7 +35,7 @@ class _TransplantsState extends State<Transplants> {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      "Kidney Transplat?",
+                      "Kidney Transplant?",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -50,7 +50,7 @@ class _TransplantsState extends State<Transplants> {
                       height: 20.0,
                     ),
                     Text(
-                        "Renal Disease is a progressive loss in renal function over a period of time. The organ affected here are the Kidneys. This condition is also knowna as Renal Chronic Disease (CKD). Renal Disease is a progressive loss in renal function over a period of time. The organ affected here are the Kidneys. This condition is also knowna as Renal Chronic Disease (CKD). Renal Disease is a progressive loss in renal function over a period of time. The organ affected here are the Kidneys. This condition is also knowna as Renal Chronic Disease (CKD). Renal Disease is a progressive loss in renal function over a period of time. The organ affected here are the Kidneys. This condition is also knowna as Renal Chronic Disease (CKD).")
+                        "Why me? Why now?")
                   ],
                 ),
               ),

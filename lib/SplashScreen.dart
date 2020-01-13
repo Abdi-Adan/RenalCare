@@ -17,8 +17,8 @@ class _SplashPageState extends State<SplashPage> {
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-                Colors.red,
-                Color(0xff680011),
+                Color(0xfff8f8),
+                Color(0xff9595)
               ], begin: Alignment.topLeft, end: Alignment.bottomRight),
             ),
           ),
@@ -44,7 +44,7 @@ class _SplashPageState extends State<SplashPage> {
                 padding: const EdgeInsets.only(top: 20),
                 child: RaisedButton(
                   shape: StadiumBorder(),
-                  color: Colors.red,
+                  color: Colors.cyan,
                   elevation: 7.0,
                   onPressed: () {
                     Navigator.push(
