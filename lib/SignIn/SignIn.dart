@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:renalcare/SignIn/LoginPage.dart';
-import 'package:renalcare/root.dart';
+import 'dart:async';
+
+import 'package:shared_preferences/shared_preferences.dart';
+
+
 
 class SignUp extends StatefulWidget {
   @override
@@ -8,20 +11,18 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  bool eye = true;
-  bool onSignup = false;
 
-  void isSignedIn() {
-    setState(() {
-      onSignup = !onSignup;
-    });
-  }
+  bool eye = true;
 
   void _toggle() {
     setState(() {
       eye = !eye;
     });
   }
+
+  TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,25 +32,6 @@ class _SignUpState extends State<SignUp> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
-        actions: <Widget>[
-          new Padding(
-            padding: const EdgeInsets.fromLTRB(0, 15, 20, 0),
-            child: new FlatButton(
-              child: new Text(
-                "Log In",
-                style: new TextStyle(color: Colors.grey, fontSize: 17),
-              ),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => LoginPage()));
-              },
-              highlightColor: Colors.red,
-              shape: StadiumBorder(),
-            ),
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -65,6 +47,19 @@ class _SignUpState extends State<SignUp> {
                 height: 40,
               ),
               new TextField(
+                controller: nameController,
+                keyboardType: TextInputType.text,
+                autocorrect: false,
+                decoration: new InputDecoration(
+                  // hintText: "Email",
+                  labelText: "Name",
+                ),
+              ),
+              new SizedBox(
+                height: 20,
+              ),
+              new TextField(
+                controller: emailController,
                 keyboardType: TextInputType.emailAddress,
                 autocorrect: false,
                 decoration: InputDecoration(
@@ -76,17 +71,7 @@ class _SignUpState extends State<SignUp> {
                 height: 20,
               ),
               new TextField(
-                keyboardType: TextInputType.text,
-                autocorrect: false,
-                decoration: new InputDecoration(
-                  // hintText: "Email",
-                  labelText: "Name",
-                ),
-              ),
-              new SizedBox(
-                height: 30,
-              ),
-              new TextField(
+                controller: passwordController,
                 keyboardType: TextInputType.text,
                 autocorrect: false,
                 decoration: new InputDecoration(
@@ -111,12 +96,7 @@ class _SignUpState extends State<SignUp> {
                 shape: StadiumBorder(),
                 splashColor: Colors.blue,
                 onPressed: () {
-                  isSignedIn();
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              MyControlScreen()));
+                  saveDetails();
                 },
               ),
               SizedBox(
@@ -128,4 +108,23 @@ class _SignUpState extends State<SignUp> {
       ),
     );
   }
+
+  void saveDetails() {
+    String name = nameController.text;
+    String email = emailController.text;
+    String password = passwordController.text;
+    saveDetailsPreferences(name, email, password).then((bool commited) {
+      Navigator.of(context).pushReplacementNamed('/root');
+    });
+  }
 }
+
+Future<bool> saveDetailsPreferences(
+    String name, String email, String password) async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.setString('name', name);
+  prefs.setString('email', email);
+  prefs.setString('password', password);
+  return prefs.commit();
+}
+

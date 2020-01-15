@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:renalcare/SignIn/Walkthrough.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -47,11 +46,7 @@ class _SplashPageState extends State<SplashPage> {
                   color: Colors.cyan,
                   elevation: 7.0,
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                WalkthroughScreen()));
+                    Navigator.of(context).pushReplacementNamed('/signIn');
                   },
                   child: Text(
                     "Get Started",

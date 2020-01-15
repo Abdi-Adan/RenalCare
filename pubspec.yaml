@@ -27,7 +27,9 @@ dependencies:
   flutter_walkthrough:
   flutter_custom_clippers: ^1.1.0
   font_awesome_flutter: ^8.5.0
-  url_launcher: ^5.4.1
+  url_launcher:
+  shared_preferences:
+  provider:
 
 dev_dependencies:
   flutter_test:
