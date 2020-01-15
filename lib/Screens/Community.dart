@@ -49,7 +49,7 @@ class _CommunityState extends State<Community> {
   }
 
   Widget _thumbStack(
-    String url,
+    String launchUrl,
     String imgPath,
     String videoName,
     String subDes,
@@ -57,12 +57,10 @@ class _CommunityState extends State<Community> {
     return InkWell(
       splashColor: Colors.transparent,
       onTap: () {
-        _launchURL(url);
+        _launchURL(launchUrl);
       },
       child: Padding(
-        padding: EdgeInsets.symmetric(
-          vertical: 10, horizontal: 10
-        ),
+        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -104,11 +102,10 @@ class _CommunityState extends State<Community> {
   }
 
   Future _launchURL(String url) async {
-    String url;
     if (await canLaunch(url)) {
       await launch(url, forceSafariVC: true, forceWebView: true);
     } else {
-      throw 'Could not launch $url';
+      throw 'Could not launch url';
     }
   }
 

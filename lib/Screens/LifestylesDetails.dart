@@ -4,17 +4,18 @@ class DetailsPage extends StatefulWidget {
   final String heroTag;
   final String foodName;
   final String foodPrice;
-  final List<String>infoCard;
+  final List<dynamic> infoCard;
   final String des;
 
-  DetailsPage({this.heroTag, this.foodName, this.foodPrice, this.infoCard, this.des});
+  DetailsPage(
+      {this.heroTag, this.foodName, this.foodPrice, this.infoCard, this.des});
 
   @override
   _DetailsPageState createState() => _DetailsPageState();
 }
 
 class _DetailsPageState extends State<DetailsPage> {
-  var selectedCard = 'SODIUM';
+  var selectedCard = 'Sodium';
   Color color = Colors.cyan;
   @override
   Widget build(BuildContext context) {
@@ -90,23 +91,27 @@ class _DetailsPageState extends State<DetailsPage> {
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold)),
                             SizedBox(height: 20.0),
-                            Text(
-                                widget.des),
+                            Text(widget.des),
                             SizedBox(height: 20.0),
                             Container(
                                 height: 150.0,
                                 child: ListView(
                                   scrollDirection: Axis.horizontal,
                                   children: <Widget>[
-                                    _buildInfoCard( widget.infoCard[0], widget.infoCard[1], widget.infoCard[2]),
+                                    _buildInfoCard(widget.infoCard[0],
+                                        widget.infoCard[1], widget.infoCard[2]),
                                     SizedBox(width: 10.0),
-                                    _buildInfoCard(widget.infoCard[3], widget.infoCard[4], widget.infoCard[5]),
+                                    _buildInfoCard(widget.infoCard[3],
+                                        widget.infoCard[4], widget.infoCard[5]),
                                     SizedBox(width: 10.0),
-                                    _buildInfoCard(widget.infoCard[6], widget.infoCard[7], widget.infoCard[8]),
+                                    _buildInfoCard(widget.infoCard[6],
+                                        widget.infoCard[7], widget.infoCard[8]),
                                   ],
                                 )),
                             SizedBox(height: 20.0),
-                            SizedBox(height: 50,)
+                            SizedBox(
+                              height: 50,
+                            )
                           ]))),
                 ],
               ),
@@ -125,8 +130,7 @@ class _DetailsPageState extends State<DetailsPage> {
             curve: Curves.easeIn,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
-              color:
-                  cardTitle == selectedCard ? Color(0xff9595) : Colors.white,
+              color: cardTitle == selectedCard ? Color(0xff9595) : Colors.white,
               border: Border.all(
                   color: cardTitle == selectedCard
                       ? Colors.transparent

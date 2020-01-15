@@ -8,6 +8,13 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool eye = true;
+  bool onLogin = false;
+
+  void isLoggedIn() {
+    setState(() {
+      onLogin = !onLogin;
+    });
+  }
 
   void _toggle() {
     setState(() {
@@ -25,7 +32,10 @@ class _LoginPageState extends State<LoginPage> {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Icon(Icons.arrow_back, color: Colors.black,),
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -87,24 +97,25 @@ class _LoginPageState extends State<LoginPage> {
               new SizedBox(
                 height: 30,
               ),
-              new SizedBox(
-                height: 50,
-                child: new RaisedButton(
-                  child: new Text("Log in",
-                      style: new TextStyle(color: Colors.white)),
-                  color: Colors.cyan,
-                  elevation: 15.0,
-                  shape: StadiumBorder(),
-                  splashColor: Colors.redAccent,
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                MyControlScreen()));
-                  },
-                ),
+              new RaisedButton(
+                child: new Text("Log in",
+                    style: new TextStyle(color: Colors.white)),
+                color: Colors.cyan,
+                elevation: 15.0,
+                shape: StadiumBorder(),
+                splashColor: Colors.blue,
+                onPressed: () {
+                  isLoggedIn();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              MyControlScreen()));
+                },
               ),
+              SizedBox(
+                height: 30,
+              )
             ],
           ),
         ),

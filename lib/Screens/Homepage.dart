@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               _listWidgetTile(
                                 "Urination Problems",
-                                "Those who suffer from Chronic Kidney Disease (CKD) often complain of the increased urge to urinate or decreased amount of urine ",
+                                "Those who suffer from Chronic\nKidney Disease (CKD) often\ncomplain of the increased urge\nto urinate or decreased amount\nof urine ",
                                 Icon(
                                   Icons.accessible_forward,
                                   color: color,
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               _listWidgetTile(
                                 "Edema",
-                                "Swelling of extremities, majorly legs due to water retention. It can also manifest in eyes puffiness and swollen legs",
+                                "Swelling of extremities, majorly\nlegs due to water retention. It\ncan also manifest in eyes\npuffiness and swollen legs",
                                 Icon(
                                   Icons.accessibility,
                                   color: color,

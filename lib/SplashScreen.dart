@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:renalcare/SignIn/Walkthrough.dart';
 
 class SplashPage extends StatefulWidget {
@@ -17,8 +16,9 @@ class _SplashPageState extends State<SplashPage> {
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-                Color(0xfff8f8),
-                Color(0xff9595)
+                Colors.cyan,
+                Colors.lightBlueAccent,
+                Colors.cyan,
               ], begin: Alignment.topLeft, end: Alignment.bottomRight),
             ),
           ),
@@ -30,9 +30,9 @@ class _SplashPageState extends State<SplashPage> {
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 100,
-                  child: LogoIcon(),
+                  child: Image.asset("assets/111.png"),
                 ),
-                ),
+              ),
               Text(
                 "Renal Care",
                 style: TextStyle(
@@ -64,19 +64,6 @@ class _SplashPageState extends State<SplashPage> {
           ),
         ],
       ),
-    );
-  }
-}
-
-class LogoIcon extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    AssetImage logoImage = AssetImage("assets/111.png");
-    Image image = Image(
-      image: logoImage,
-    );
-    return Container(
-      child: image, height: 200,
     );
   }
 }

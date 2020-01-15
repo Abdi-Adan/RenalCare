@@ -47,28 +47,166 @@ class _LifeStylesState extends State<LifeStyles> {
                     child: Container(
                         height: MediaQuery.of(context).size.height - 300.0,
                         child: ListView(children: [
-                          _buildFoodItem('assets/plate1.png', 'Blue Berries',
-                              'are packed with...', [], ''),
-                          _buildFoodItem('assets/plate2.png', 'Red Grapes',
-                              'they deliver a ton...', [], ''),
-                          _buildFoodItem('assets/plate6.png', 'Egg Whites',
-                              'provide a high quality...', [], ''),
-                          _buildFoodItem('assets/plate5.png', 'Garlic',
-                              'a good source of...', [], ''),
-                          _buildFoodItem('assets/foods/oliveoil.jpg', 'Olive Oil',
-                              ' healthy source of fat...', [], ''),
-                          _buildFoodItem('assets/foods/cabage.jpg.png', 'Cabbage',
-                              'belongs to the...', [], ''),
                           _buildFoodItem(
                               'assets/foods/blueberries.jpg',
+                              'Blue Berries',
+                              'are packed with...',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing'),
+                          _buildFoodItem(
+                              'assets/plate1.png',
+                              'Red Grapes',
+                              'they deliver a ton...',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing'),
+                          _buildFoodItem(
+                              'assets/foods/eggwhite.jpg',
+                              'Egg Whites',
+                              'provide a high quality...',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing'),
+                          _buildFoodItem(
+                              'assets/foods/garlic.jpg',
+                              'Garlic',
+                              'a good source of...',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing'),
+                          _buildFoodItem(
+                              'assets/foods/oliveoil.jpg',
+                              'Olive Oil',
+                              ' healthy source of fat...',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing'),
+                          _buildFoodItem(
+                              'assets/foods/cabbage.jpg',
+                              'Cabbage',
+                              'belongs to the...',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing'),
+                          _buildFoodItem(
+                              'assets/plate6.png',
                               'Skinless Chicken',
-                              'skinless chicken...', [], ''),
-                          _buildFoodItem('assets/foods/onions.jpg', 'Onions',
-                              'excellent for providing..', [], ''),
-                          _buildFoodItem('assets/foods/macademianuts.jpg', 'Macademia Nuts',
-                              'They are delicious and...', [], ''),
-                          _buildFoodItem('assets/foods/pineapples.jpg', 'Pineapple',
-                              'pineapple makes...', [], '')
+                              'skinless chicken...',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing'),
+                          _buildFoodItem(
+                              'assets/foods/onions.jpg',
+                              'Onions',
+                              'excellent for providing..',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing'),
+                          _buildFoodItem(
+                              'assets/foods/macademianuts.jpg',
+                              'Macademia Nuts',
+                              'They are delicious and...',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing'),
+                          _buildFoodItem(
+                              'assets/foods/pineapples.jpg',
+                              'Pineapple',
+                              'pineapple makes...',
+                              [
+                                'Sodium',
+                                '100G',
+                                'B12',
+                                'Potassium',
+                                '100G',
+                                'B12',
+                                'Calcium',
+                                '100G',
+                                'B12'
+                              ],
+                              'Description testing')
                         ]))),
               ],
             ),
@@ -82,7 +220,7 @@ class _LifeStylesState extends State<LifeStyles> {
     String imgPath,
     String foodName,
     String sub,
-    List infoCard,
+    List<dynamic> infoCard,
     String des,
   ) {
     return Padding(
@@ -91,7 +229,10 @@ class _LifeStylesState extends State<LifeStyles> {
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => DetailsPage(
-                      heroTag: imgPath, foodName: foodName, foodPrice: sub, infoCard: infoCard)));
+                      heroTag: imgPath,
+                      foodName: foodName,
+                      foodPrice: sub,
+                      infoCard: infoCard)));
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -99,12 +240,33 @@ class _LifeStylesState extends State<LifeStyles> {
                 Container(
                     child: Row(children: [
                   Hero(
-                      tag: imgPath,
-                      child: Image(
+                    tag: imgPath,
+                    child: Container(
+                      height: 75.0,
+                      width: 75.0,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(40),
+                        ),
+                        image: DecorationImage(
+                          fit: BoxFit.fill,
                           image: AssetImage(imgPath),
-                          fit: BoxFit.cover,
-                          height: 75.0,
-                          width: 75.0)),
+                        ),
+                        color: Colors.red,
+                      ),
+                    ),
+                  ),
+                  // Hero(
+                  //     tag: imgPath,
+                  //     child: CircleAvatar(
+                  //       radius: 40,
+                  //       child: Image(
+                  //           image: AssetImage(imgPath),
+                  //           fit: BoxFit.fill,
+                  //           height: 75.0,
+                  //           width: 75.0),
+                  //     )),
                   SizedBox(width: 10.0),
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

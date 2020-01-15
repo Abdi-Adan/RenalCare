@@ -9,6 +9,13 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   bool eye = true;
+  bool onSignup = false;
+
+  void isSignedIn() {
+    setState(() {
+      onSignup = !onSignup;
+    });
+  }
 
   void _toggle() {
     setState(() {
@@ -96,24 +103,25 @@ class _SignUpState extends State<SignUp> {
               new SizedBox(
                 height: 30,
               ),
-              new SizedBox(
-                height: 50,
-                child: new RaisedButton(
-                  child: new Text("Sign up",
-                      style: new TextStyle(color: Colors.white)),
-                  color: Colors.cyan,
-                  elevation: 15.0,
-                  shape: StadiumBorder(),
-                  splashColor: Colors.redAccent,
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                MyControlScreen()));
-                  },
-                ),
+              RaisedButton(
+                child: new Text("Sign up",
+                    style: new TextStyle(color: Colors.white)),
+                color: Colors.cyan,
+                elevation: 15.0,
+                shape: StadiumBorder(),
+                splashColor: Colors.blue,
+                onPressed: () {
+                  isSignedIn();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              MyControlScreen()));
+                },
               ),
+              SizedBox(
+                height: 30,
+              )
             ],
           ),
         ),

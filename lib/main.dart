@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:renalcare/SignIn/Walkthrough.dart';
 import 'package:renalcare/root.dart';
 import 'package:flutter/services.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       home: SplashPage(),
       routes: <String, WidgetBuilder>{
         '/root': (BuildContext context) => new MyControlScreen(),
+        '/walkthrough': (BuildContext context) => WalkthroughScreen(),
       },
     );
   }

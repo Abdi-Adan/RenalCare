@@ -63,8 +63,8 @@ class _MyControlScreenState extends State<MyControlScreen> {
             color: Colors.white,
           ),
         ],
-        color: Color(0xfff8f8),
-        buttonBackgroundColor: Color(0xff9595),
+        color: Colors.cyan,
+        buttonBackgroundColor: Colors.blue,
         backgroundColor: Colors.transparent,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
@@ -77,12 +77,12 @@ class _MyControlScreenState extends State<MyControlScreen> {
     );
   }
 
-buildDrawer() {
+  buildDrawer() {
     return ClipPath(
       clipper: OvalRightBorderClipper(),
       child: Container(
         padding: const EdgeInsets.only(left: 16.0, right: 40),
-        decoration: BoxDecoration(color: Color(0xff680011), boxShadow: [
+        decoration: BoxDecoration(color: Colors.cyan, boxShadow: [
           BoxShadow(color: Color(0xff680011)),
         ]),
         width: 300,
@@ -95,14 +95,11 @@ buildDrawer() {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    gradient: LinearGradient(colors: [
-                      Color(0xff680011),
-                      Colors.deepPurple,
-                    ]),
+                    color: Colors.blue,
                   ),
                   child: CircleAvatar(
                     radius: 40,
-                    backgroundColor: Colors.red,
+                    backgroundColor: Colors.cyan,
                     child: Text(
                       "K",
                       style: TextStyle(
@@ -122,10 +119,36 @@ buildDrawer() {
                 SizedBox(
                   height: 30,
                 ),
-                buildRow(Icons.email, "email", ''),
-                Divider(),
-                buildRow(Icons.power_settings_new, "Your Profile", ''),
-                SizedBox(height: 10,)
+                buildRow(Icons.email, "Email", 'adanabdi036@gmail.com'),
+                SizedBox(
+                  height: 20,
+                ),
+                InkWell(
+                  splashColor: Colors.blue,
+                  onTap: () {
+                    debugPrint('presssed');
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Icon(
+                        Icons.power_settings_new,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Logout",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           ),
@@ -149,12 +172,16 @@ buildDrawer() {
             width: 10.0,
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Text(
                 title,
                 style: tStyle,
               ),
-              SizedBox(height: 3,),
+              SizedBox(
+                height: 3,
+              ),
               Text(
                 subtitle,
                 style: subStyle,
