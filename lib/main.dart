@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:renalcare/SignIn/SignIn.dart';
+// import 'package:renalcare/SignIn/SignIn.dart';
 
 
 
-import 'package:renalcare/SignIn/Walkthrough.dart';
+// import 'package:renalcare/SignIn/Walkthrough.dart';
 import 'package:renalcare/root.dart';
 import 'SplashScreen.dart';
 
@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
       home: SplashPage(),
       routes: <String, WidgetBuilder>{
         '/root': (BuildContext context) => new MyControlScreen(),
-        '/walkthrough': (BuildContext context) => WalkthroughScreen(),
-        '/signIn': (BuildContext context) => SignUp(),
+        // '/walkthrough': (BuildContext context) => WalkthroughScreen(),
+        // '/signIn': (BuildContext context) => SignUp(),
       },
     );
   }

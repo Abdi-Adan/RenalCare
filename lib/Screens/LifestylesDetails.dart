@@ -20,7 +20,7 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff680011),
+        backgroundColor: color,
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
@@ -130,7 +130,7 @@ class _DetailsPageState extends State<DetailsPage> {
             curve: Curves.easeIn,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
-              color: cardTitle == selectedCard ? Color(0xff9595) : Colors.white,
+              color: cardTitle == selectedCard ? Colors.cyan : Colors.white,
               border: Border.all(
                   color: cardTitle == selectedCard
                       ? Colors.transparent
@@ -152,7 +152,7 @@ class _DetailsPageState extends State<DetailsPage> {
                           fontSize: 12.0,
                           color: cardTitle == selectedCard
                               ? Colors.white
-                              : Colors.grey.withOpacity(0.7),
+                              : Colors.black,
                         )),
                   ),
                   Padding(

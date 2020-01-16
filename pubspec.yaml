@@ -56,6 +56,7 @@ flutter:
     - assets/plate4.png
     - assets/plate5.png
     - assets/plate6.png
+    - assets/picture.png
     - assets/foods/blueberries.jpg
     - assets/foods/cabbage.jpg
     - assets/foods/eggwhite.jpg
@@ -65,6 +66,9 @@ flutter:
     - assets/foods/onions.jpg
     - assets/foods/pineapples.jpg
     - assets/foods/transplantbanner.jpg
+    - assets/father_son.jpg
+    - assets/success_story.jpg
+    - assets/patient_from_nairobi.jpg
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -6,6 +6,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final TextStyle tStyle =
+      TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20);
+  final TextStyle sStyle = TextStyle(
+      color: Colors.black.withOpacity(0.9), fontWeight: FontWeight.normal, fontSize: 16);
+
   Color color = Colors.cyan;
   @override
   Widget build(BuildContext context) {
@@ -115,6 +120,51 @@ class _HomePageState extends State<HomePage> {
                                   size: 30,
                                 ),
                               ),
+                              ListTile(
+                                title: Text(
+                                  "Kidney Stones",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              kidneyThumb("assets/picture.png"),
+                              kidneyTile("Kidney Stones",
+                                  "Kidney stones (renal lithiasis, nephrolithiasis) are hard deposits made of minerals and salts that form inside your kidneys. Kidney stones have many causes and can affect any part of your urinary tract — from your kidneys to your bladder. Often, stones form when the urine becomes concentrated, allowing minerals to crystallize and stick together. Passing kidney stones can be quite painful, but the stones usually cause no permanent damage if they're recognized in a timely fashion. Depending on your situation, you may need nothing more than to take pain medication and drink lots of water to pass a kidney stone. In other instances — for example, if stones become lodged in the urinary tract, are associated with a urinary infection or cause complications — surgery may be needed. Your doctor may recommend preventive treatment to reduce your risk of recurrent kidney stones if you're at increased risk of developing them again"),
+                              kidneyTile("Signs and Symptoms",
+                                  "Sharp pains in your back, side, lower abdomen, or groin\npink, red, or brown blood in your urine, also called hematuria\na constant need to urinate\npain while urinating\ninability to urinate or can only urinate a small amount\ncloudy or bad-smelling urine"),
+                              kidneyTile("Types of Kidney Stones",
+                                  "Kidney stones often have no definite, single cause, although several factors may increase your risk. Kidney stones form when your urine contains more crystal-forming substances — such as calcium, oxalate and uric acid — than the fluid in your urine can dilute. At the same time, your urine may lack substances that prevent crystals from sticking together, creating an ideal environment for kidney stones to form."),
+                              ListTile(
+                                title: Text(
+                                  "Risk Factors: ",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              kidneyTile("Family or personal history",
+                                  "If someone in your family has kidney stones, you're more likely to develop stones, too. And if you've already had one or more kidney stones, you're at increased risk of developing another."),
+                              kidneyTile("Dehydration.",
+                                  "Not drinking enough water each day can increase your risk of kidney stones. People who live in warm climates and those who sweat a lot may be at higher risk than others."),
+                              kidneyTile("Certain diets",
+                                  "Eating a diet that's high in protein, sodium (salt) and sugar may increase your risk of some types of kidney stones. This is especially true with a high-sodium diet. Too much salt in your diet increases the amount of calcium your kidneys must filter and significantly increases your risk of kidney stones."),
+                              kidneyTile("Being obese.",
+                                  "High body mass index (BMI), large waist size and weight gain have been linked to an increased risk of kidney stones."),
+                              kidneyTile("Digestive diseases and surgery",
+                                  "Gastric bypass surgery, inflammatory bowel disease or chronic diarrhea can cause changes in the digestive process that affect your absorption of calcium and water, increasing the levels of stone-forming substances in your urine."),
+                              kidneyTile("Other medical conditions.",
+                                  "Diseases and conditions that may increase your risk of kidney stones include renal tubular acidosis, cystinuria, hyperparathyroidism, certain medications and some urinary tract infections."),
+                              ListTile(
+                                title: Text(
+                                  "Prevention ",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              kidneyTile("Drink plenty of water:",
+                                  "Drinking extra water dilutes the substances in urine that lead to stones "),
+                              kidneyTile("Reduce sodium",
+                                  "A high-sodium diet can trigger kidney stones because it increases the amount of calcium in your urine."),
+                              kidneyTile("Limit animal protein",
+                                  "Eating too much animal protein, such as red meat, poultry, eggs, and seafood, boosts the level of uric acid and could lead to kidney stones. A high-protein diet also reduces levels of citrate, the chemical in urine that helps prevent stones from forming."),
+                              kidneyTile("Eat more calcium-rich foods",
+                                  "The most common type of kidney stone is the calcium oxalate stone, leading many people to believe they should avoid eating calcium. The opposite is true. Low-calcium diets may increase your kidney stone risk and your risk of osteoporosis.")
                             ],
                           ),
                         ))
@@ -131,8 +181,8 @@ class _HomePageState extends State<HomePage> {
   ) {
     return Card(
       elevation: 5.0,
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -157,6 +207,54 @@ class _HomePageState extends State<HomePage> {
             )
           ],
         ),
+      ),
+    );
+  }
+
+  Widget kidneyThumb(String imagePathURL) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 8),
+      alignment: Alignment.center,
+      width: MediaQuery.of(context).size.width,
+      height: 250,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.fill,
+          image: AssetImage(imagePathURL),
+        ),
+        color: Colors.red,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30.0),
+          bottomRight: Radius.circular(30.0),
+        ),
+      ),
+    );
+  }
+
+  Widget kidneyTile(String heading, String content) {
+    return Card(
+      elevation: 5.0,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 15),
+            child: Text(
+              heading,
+              style: tStyle,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 15),
+            child: Text(
+              content,
+              style: sStyle,
+            ),
+          )
+        ],
       ),
     );
   }

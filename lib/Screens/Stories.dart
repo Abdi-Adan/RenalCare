@@ -30,9 +30,11 @@ class _StoriesState extends State<Stories> {
           ),
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: Text(widget.storyDetails),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: Text(widget.storyDetails),
+        ),
       ),
     );
   }

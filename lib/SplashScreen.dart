@@ -27,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
               SizedBox(
                 height: 300,
                 child: CircleAvatar(
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.cyanAccent,
                   radius: 100,
                   child: Image.asset("assets/111.png"),
                 ),
@@ -46,7 +46,7 @@ class _SplashPageState extends State<SplashPage> {
                   color: Colors.cyan,
                   elevation: 7.0,
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/signIn');
+                    Navigator.of(context).pushReplacementNamed('/root');
                   },
                   child: Text(
                     "Get Started",
