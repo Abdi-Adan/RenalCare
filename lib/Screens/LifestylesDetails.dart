@@ -62,13 +62,13 @@ class _DetailsPageState extends State<DetailsPage> {
                   child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(40),
+                            Radius.circular(120),
                           ),
                           image: DecorationImage(
                               image: AssetImage(widget.heroTag),
                               fit: BoxFit.fill)),
-                      height: 200.0,
-                      width: 200.0))),
+                      height: 180.0,
+                      width: 180.0))),
           Positioned(
             top: 220.0,
             left: 0.0,
@@ -83,8 +83,11 @@ class _DetailsPageState extends State<DetailsPage> {
                 primary: false,
                 padding: EdgeInsets.only(left: 25.0, right: 20.0),
                 children: <Widget>[
+                  SizedBox(
+                    height: 10,
+                  ),
                   Padding(
-                      padding: EdgeInsets.only(top: 45.0),
+                      padding: EdgeInsets.only(top: 50.0),
                       child: Container(
                           height: MediaQuery.of(context).size.height - 300.0,
                           child: ListView(children: [
@@ -231,7 +234,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         Text(unit,
                             style: TextStyle(
                               fontFamily: 'Montserrat',
-                              fontSize: 12.0,
+                              fontSize: 10.0,
                               color: cardTitle == selectedCard
                                   ? Colors.white
                                   : Colors.black,

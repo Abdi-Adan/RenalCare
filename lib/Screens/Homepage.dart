@@ -20,49 +20,61 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.cyan,
       appBar: AppBar(
         elevation: 0,
+        centerTitle: true,
         title: Text(
-          "Chronic Kidney Disease, (CKD).",
+          "Chronic Kidney Disease",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Icons.person,
+              color: Colors.white,
+            ),
             onPressed: () {
-showGeneralDialog(
-            context: context,
-            barrierDismissible: true,
-            barrierLabel:
-                MaterialLocalizations.of(context).modalBarrierDismissLabel,
-            barrierColor: Colors.black45,
-            transitionDuration: const Duration(milliseconds: 200),
-            pageBuilder: (BuildContext buildContext, Animation animation,
-                Animation secondaryAnimation) {
-              return Center(
-                child: Container(
-                  width: MediaQuery.of(context).size.width - 10,
-                  height: MediaQuery.of(context).size.height - 80,
-                  padding: EdgeInsets.all(20),
-                  color: Colors.white,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text("Prof A.J.O Were\nConsultant, Physician, Nephrologist at Nairobi Hospital, KNH, Deputy Director,East African Kidney Institute.\nContact 0722711444 or 0729251451\nDr. Mwongera Frank Kamunde\nUpper Hill Medical Centre Nairobi Kidney Centre, 1st Floor +254 20 271 8182\nDr. Ahmed Twahir Majid Parklands Mediplaza, Third Parklands Ave Tel:020-3752727,3740397, 0733-220834"),
-                      RaisedButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Text(
-                          "Back",
-                          style: TextStyle(color: Colors.black),
+              showGeneralDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  barrierLabel: MaterialLocalizations.of(context)
+                      .modalBarrierDismissLabel,
+                  barrierColor: Colors.black45,
+                  transitionDuration: const Duration(milliseconds: 200),
+                  pageBuilder: (BuildContext buildContext, Animation animation,
+                      Animation secondaryAnimation) {
+                    return Center(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width - 10,
+                        height: MediaQuery.of(context).size.height - 80,
+                        padding: EdgeInsets.all(20),
+                        color: Colors.white,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Prof A.J.O Were\nConsultant, Physician, Nephrologist at Nairobi Hospital, KNH, Deputy Director,East African Kidney Institute.\nContact 0722711444 or 0729251451\nDr. Mwongera Frank Kamunde\nUpper Hill Medical Centre Nairobi Kidney Centre, 1st Floor +254 20 271 8182\nDr. Ahmed Twahir Majid Parklands Mediplaza, Third Parklands Ave Tel:020-3752727,3740397, 0733-220834",
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.black,),
+                            ),
+                            SizedBox(height: 20),
+                            RaisedButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Text(
+                                "Back",
+                                style: TextStyle(color: Colors.black),
+                              ),
+                              color: const Color(0xFF1BC0C5),
+                            )
+                          ],
                         ),
-                        color: const Color(0xFF1BC0C5),
-                      )
-                    ],
-                  ),
-                ),
-              );
-            });
+                      ),
+                    );
+                  });
             },
+          ),
+          SizedBox(
+            width: 10,
           ),
         ],
         backgroundColor: Colors.cyan,
@@ -128,7 +140,7 @@ showGeneralDialog(
                               ),
                               _listWidgetTile(
                                 "Urination Problems",
-                                "Those who suffer from Chronic\nKidney Disease (CKD) often\ncomplain of the increased urge\nto urinate or decreased amount\nof urine ",
+                                "Those who suffer from Chronic\nKidney Disease (CKD) often\ncomplain of the increased urge\nto urinate or decreased amount\nof urine\n ",
                                 Icon(
                                   Icons.accessible_forward,
                                   color: color,
@@ -137,7 +149,7 @@ showGeneralDialog(
                               ),
                               _listWidgetTile(
                                 "Edema",
-                                "Swelling of extremities, majorly\nlegs due to water retention. It\ncan also manifest in eyes\npuffiness and swollen legs",
+                                "Swelling of extremities, majorly\nlegs due to water retention. It\ncan also manifest in eyes\npuffiness and swollen legs\n",
                                 Icon(
                                   Icons.accessibility,
                                   color: color,
@@ -146,7 +158,7 @@ showGeneralDialog(
                               ),
                               _listWidgetTile(
                                 "Urine Changes",
-                                'as the kidneys looses the ability to work properly  there are noticable changes in urine colour, shade or smell.',
+                                'as the kidneys looses the\nability to work properly  there\nare noticable changes in\nurine colour, shade or smell.\n',
                                 Icon(
                                   Icons.gesture,
                                   color: color,
@@ -155,7 +167,7 @@ showGeneralDialog(
                               ),
                               _listWidgetTile(
                                 "Extreme Fatigue",
-                                "the moment the  normal function of kidneys are altered and cant remove waste from body as needed, fatigue sets in",
+                                "the moment the  normal\nfunction of kidneys are\naltered and cant remove\nwaste from body as needed\nfatigue sets in\n",
                                 Icon(
                                   Icons.directions_walk,
                                   color: color,
@@ -164,7 +176,7 @@ showGeneralDialog(
                               ),
                               _predisposingDialog(
                                   "Predisposing factors:",
-                                  "diseases, conditions and agents  that may lead or leads to renal diseases include: ",
+                                  "diseases, conditions and agents  that may\nlead or leads to renal diseases include:\n ",
                                   "1. Blood clots in the veins and arteries in and around the kidneys.\n2. Cholesreral deposits that block blood flow in the kidneys.\n3. Glomerulonephritis ( inflammation of the tiny filtersin the kidneys)\n4. Haemolytic uremic syndrome\n5. Some infections.\n6. Conditions such as diabetes, and high blood pressure are the major culprit in ( ckd)\n7. Obesity , has also been shown to be  a risk factor ( ckd)\n8. Lower levels of klotho protein in blood stream of both animals and human beings was found to have a correlation with(ckd)."),
                               ListTile(
                                 title: Text(
@@ -266,7 +278,11 @@ showGeneralDialog(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(data),
+                      Text(
+                        data,
+                        style: TextStyle(fontSize: 16, color: Colors.black),
+                      ),
+                      SizedBox(height: 30),
                       RaisedButton(
                         onPressed: () {
                           Navigator.of(context).pop();
@@ -351,7 +367,6 @@ showGeneralDialog(
 
   Widget kidneyThumb(String imagePathURL) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 8),
       alignment: Alignment.center,
       width: MediaQuery.of(context).size.width,
       height: 250,
@@ -372,12 +387,12 @@ showGeneralDialog(
   Widget kidneyTile(String heading, String content) {
     return Container(
       child: Card(
-        margin: EdgeInsets.symmetric(horizontal: 15),
         elevation: 5.0,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               child: Text(
                 heading,
                 style: tStyle,
@@ -387,10 +402,14 @@ showGeneralDialog(
               height: 10,
             ),
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 15),
               child: Text(
                 content,
                 style: sStyle,
               ),
+            ),
+            SizedBox(
+              height: 10,
             )
           ],
         ),

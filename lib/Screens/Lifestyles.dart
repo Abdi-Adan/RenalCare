@@ -33,19 +33,19 @@ class _LifeStylesState extends State<LifeStyles> {
           ),
           SizedBox(height: 40.0),
           Container(
-            height: MediaQuery.of(context).size.height - 185.0,
+            height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(topLeft: Radius.circular(75.0)),
             ),
             child: ListView(
-              primary: false,
+              primary: true,
               padding: EdgeInsets.only(left: 25.0, right: 20.0),
               children: <Widget>[
                 Padding(
                     padding: EdgeInsets.only(top: 45.0),
                     child: Container(
-                        height: MediaQuery.of(context).size.height - 300.0,
+                        height: MediaQuery.of(context).size.height - 200.0,
                         child: ListView(children: [
                           _buildFoodItem(
                               'assets/foods/blueberries.jpg',

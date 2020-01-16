@@ -15,7 +15,7 @@ class _TransplantsState extends State<Transplants> {
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
-                text: "Pre-Transplants",
+                text: "Pre-Transplants,",
               ),
               Tab(
                 text: "Post-Transplants",
@@ -179,94 +179,94 @@ class _PostTransplantsState extends State<PostTransplants> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
         child: Column(children: <Widget>[
-      Container(
-        margin: EdgeInsets.fromLTRB(16.0, 250.0, 16.0, 16.0),
-        decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(5.0)),
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-              child: ListTile(
-                title: Text(
-                  "What happens in the first 48hrs",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            ListTile(
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+            child: ListTile(
               title: Text(
-                "The early period of post-transplant surgery requires frequent monitoring in order to maintain the fluid balance.",
-                style: TextStyle(fontSize: 14),
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            postTile("Oligo anuria",
-                "The patient might experience cases of passing urine. When the patient experiences cases of oligo anuria, it is important to establish the causes of graft dysfunction."),
-            postTile("Urine leak",
-                "Although this is rare, urine passage into the peritoneal cavity can be observed. If this is suspected, an isotope scan can be performed."),
-            postTile("Rejection",
-                "This might happen due to donor-directed antibodies that were present prior to implantation."),
-            postTile("Ileus.",
-                "This is the inability of the intestine (bowel) to contract normally and move waste out of the body. This is usually common after the surgery."),
-            ListTile(
-              title: Text(
-                "Two weeks to six months post-transplant",
+                "What happens in the first 48hrs",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
-              height: 10,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          ListTile(
+            title: Text(
+              "The early period of post-transplant surgery requires frequent monitoring in order to maintain the fluid balance.",
+              style: TextStyle(fontSize: 14),
             ),
-            ListTile(
-              title: Text(
-                "Agents for supporting Post-Transplant patients",
-                style: TextStyle(fontSize: 14),
-              ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          postTile("Oligo anuria",
+              "The patient might experience cases of passing urine. When the patient experiences cases of oligo anuria, it is important to establish the causes of graft dysfunction."),
+          postTile("Urine leak",
+              "Although this is rare, urine passage into the peritoneal cavity can be observed. If this is suspected, an isotope scan can be performed."),
+          postTile("Rejection",
+              "This might happen due to donor-directed antibodies that were present prior to implantation."),
+          postTile("Ileus.",
+              "This is the inability of the intestine (bowel) to contract normally and move waste out of the body. This is usually common after the surgery."),
+          ListTile(
+            title: Text(
+              "Two weeks to six months post-transplant",
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(
-              height: 15,
+          ),
+          ListTile(
+            title: Text(
+              "(Agents for supporting Post-Transplant patients)",
+              style: TextStyle(fontSize: 14),
             ),
-            postTile("Monitoring",
-                "Rejection is rarely diagnosed the first 5 days post transplant. Follow up is therefore necessary  foor the purpose of acute rejection, in any instances."),
-            postTile("Family Support",
-                "Dialysis does not only change the life of the patient, but also the families essential for the family members to learn effective support practices to help with both the emotional development and lifestyle improvement."),
-            postTile("Patient Education.",
-                "The patient should have knowledge on lifestyle habits; what and what not to eat, knowledge of drug and substance use and precautions."),
-            postTile("Immunosuppressants",
-                "There are instances where the medicine can lower the body's ability to reject a transplanted kidney. After the transplant, the body takes the new kidney as foreign as it adjusts o it, and in this, itl will attack the new kidney. The immunosuppressant’s therefore prevents the body from damaging the new organ. While minimizing the side effects"),
-            ListTile(
+          ),
+          postTile("Monitoring",
+              "Rejection is rarely diagnosed the first 5 days post transplant. Follow up is therefore necessary  foor the purpose of acute rejection, in any instances."),
+          postTile("Family Support",
+              "Dialysis does not only change the life of the patient, but also the families essential for the family members to learn effective support practices to help with both the emotional development and lifestyle improvement."),
+          postTile("Patient Education.",
+              "The patient should have knowledge on lifestyle habits; what and what not to eat, knowledge of drug and substance use and precautions."),
+          postTile("Immunosuppressants",
+              "There are instances where the medicine can lower the body's ability to reject a transplanted kidney. After the transplant, the body takes the new kidney as foreign as it adjusts o it, and in this, itl will attack the new kidney. The immunosuppressant’s therefore prevents the body from damaging the new organ. While minimizing the side effects"),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: ListTile(
               title: Text(
                 "Agents used for maintenance of immunosuppression.",
-                style: TextStyle(fontSize: 14),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
-            postTile("Calcineurin Inhibitors",
-                "These are medicine that inhibits the action of Calcineurin; Calcineurin is the enzyme that activates that activates the T-Cells of the immune system."),
-            postTile("Corticosteroids.",
-                "These are drugs that lowers inflammation in the body by reducing the immune system activity. Because the corticosteroids ease swelling, itching and allergic reaction."),
-            postTile("Antiproliferative drugs.",
-                "These are drugs that reduce the strength of the body,s immune sysem  to reduce the unlikelihood of the body rejecting the transplanted kidney. "),
-            ListTile(
+          ),
+          postTile("Calcineurin Inhibitors",
+              "These are medicine that inhibits the action of Calcineurin; Calcineurin is the enzyme that activates that activates the T-Cells of the immune system."),
+          postTile("Corticosteroids.",
+              "These are drugs that lowers inflammation in the body by reducing the immune system activity. Because the corticosteroids ease swelling, itching and allergic reaction."),
+          postTile("Antiproliferative drugs.",
+              "These are drugs that reduce the strength of the body,s immune sysem  to reduce the unlikelihood of the body rejecting the transplanted kidney. "),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: ListTile(
               title: Text(
-                "Costs of Renal Transplants",
-                style: TextStyle(fontSize: 14),
+                "Costs of Renal Transplants.",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
-            postTile("Kenyatta National Hospital",
-                "Ranges from 1.5 - 2 Million inclusive of Compatibility testing which is done in South Africa after the samples are taken from the patient")
-          ],
-        ),
+          ),
+          postTile("Kenyatta National Hospital",
+              "Ranges from 1.5 Million inclusive of Compatibility testing (costs 200,000 alone) which is done in South Africa after the samples are taken from the patient. Less 500,000 which is covered by NHIF; Totaling to about 1Million for a full transplant"),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: ListTile(
+              title: Text(
+                "The Compatibility testing facility is currently under Construction at KNH.",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+        ],
       ),
     ]));
   }
@@ -279,9 +279,12 @@ class _PostTransplantsState extends State<PostTransplants> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            SizedBox(
+              height: 10,
+            ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15),
               child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 15),
                 child: Text(
                   heading,
                   style: tStyle,
@@ -292,11 +295,15 @@ class _PostTransplantsState extends State<PostTransplants> {
               height: 10,
             ),
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 15),
               child: Text(
                 content,
                 style: sStyle,
               ),
-            )
+            ),
+            SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),
