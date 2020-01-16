@@ -7,15 +7,66 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final TextStyle tStyle =
-      TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20);
+      TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16);
   final TextStyle sStyle = TextStyle(
-      color: Colors.black.withOpacity(0.9), fontWeight: FontWeight.normal, fontSize: 16);
+      color: Colors.black.withOpacity(0.9),
+      fontWeight: FontWeight.normal,
+      fontSize: 14);
 
   Color color = Colors.cyan;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.cyan,
+      appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          "Chronic Kidney Disease, (CKD).",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.person),
+            onPressed: () {
+showGeneralDialog(
+            context: context,
+            barrierDismissible: true,
+            barrierLabel:
+                MaterialLocalizations.of(context).modalBarrierDismissLabel,
+            barrierColor: Colors.black45,
+            transitionDuration: const Duration(milliseconds: 200),
+            pageBuilder: (BuildContext buildContext, Animation animation,
+                Animation secondaryAnimation) {
+              return Center(
+                child: Container(
+                  width: MediaQuery.of(context).size.width - 10,
+                  height: MediaQuery.of(context).size.height - 80,
+                  padding: EdgeInsets.all(20),
+                  color: Colors.white,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Prof A.J.O Were\nConsultant, Physician, Nephrologist at Nairobi Hospital, KNH, Deputy Director,East African Kidney Institute.\nContact 0722711444 or 0729251451\nDr. Mwongera Frank Kamunde\nUpper Hill Medical Centre Nairobi Kidney Centre, 1st Floor +254 20 271 8182\nDr. Ahmed Twahir Majid Parklands Mediplaza, Third Parklands Ave Tel:020-3752727,3740397, 0733-220834"),
+                      RaisedButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Text(
+                          "Back",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        color: const Color(0xFF1BC0C5),
+                      )
+                    ],
+                  ),
+                ),
+              );
+            });
+            },
+          ),
+        ],
+        backgroundColor: Colors.cyan,
+      ),
       body: ListView(
         children: <Widget>[
           SizedBox(height: 25.0),
@@ -95,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               _listWidgetTile(
                                 "Urine Changes",
-                                'Noticable changes in urine color...',
+                                'as the kidneys looses the ability to work properly  there are noticable changes in urine colour, shade or smell.',
                                 Icon(
                                   Icons.gesture,
                                   color: color,
@@ -104,39 +155,55 @@ class _HomePageState extends State<HomePage> {
                               ),
                               _listWidgetTile(
                                 "Extreme Fatigue",
-                                'Tiredness...',
+                                "the moment the  normal function of kidneys are altered and cant remove waste from body as needed, fatigue sets in",
                                 Icon(
                                   Icons.directions_walk,
                                   color: color,
                                   size: 30,
                                 ),
                               ),
-                              _listWidgetTile(
-                                "Predisposing Factors",
-                                'Agents that may lead to...',
-                                Icon(
-                                  Icons.format_align_right,
-                                  color: color,
-                                  size: 30,
-                                ),
-                              ),
+                              _predisposingDialog(
+                                  "Predisposing factors:",
+                                  "diseases, conditions and agents  that may lead or leads to renal diseases include: ",
+                                  "1. Blood clots in the veins and arteries in and around the kidneys.\n2. Cholesreral deposits that block blood flow in the kidneys.\n3. Glomerulonephritis ( inflammation of the tiny filtersin the kidneys)\n4. Haemolytic uremic syndrome\n5. Some infections.\n6. Conditions such as diabetes, and high blood pressure are the major culprit in ( ckd)\n7. Obesity , has also been shown to be  a risk factor ( ckd)\n8. Lower levels of klotho protein in blood stream of both animals and human beings was found to have a correlation with(ckd)."),
                               ListTile(
                                 title: Text(
                                   "Kidney Stones",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
                                 ),
                               ),
                               kidneyThumb("assets/picture.png"),
+                              SizedBox(
+                                height: 10,
+                              ),
                               kidneyTile("Kidney Stones",
                                   "Kidney stones (renal lithiasis, nephrolithiasis) are hard deposits made of minerals and salts that form inside your kidneys. Kidney stones have many causes and can affect any part of your urinary tract — from your kidneys to your bladder. Often, stones form when the urine becomes concentrated, allowing minerals to crystallize and stick together. Passing kidney stones can be quite painful, but the stones usually cause no permanent damage if they're recognized in a timely fashion. Depending on your situation, you may need nothing more than to take pain medication and drink lots of water to pass a kidney stone. In other instances — for example, if stones become lodged in the urinary tract, are associated with a urinary infection or cause complications — surgery may be needed. Your doctor may recommend preventive treatment to reduce your risk of recurrent kidney stones if you're at increased risk of developing them again"),
                               kidneyTile("Signs and Symptoms",
                                   "Sharp pains in your back, side, lower abdomen, or groin\npink, red, or brown blood in your urine, also called hematuria\na constant need to urinate\npain while urinating\ninability to urinate or can only urinate a small amount\ncloudy or bad-smelling urine"),
-                              kidneyTile("Types of Kidney Stones",
-                                  "Kidney stones often have no definite, single cause, although several factors may increase your risk. Kidney stones form when your urine contains more crystal-forming substances — such as calcium, oxalate and uric acid — than the fluid in your urine can dilute. At the same time, your urine may lack substances that prevent crystals from sticking together, creating an ideal environment for kidney stones to form."),
+                              ListTile(
+                                title: Text(
+                                  "Types of Kidney Stones ",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
+                                ),
+                              ),
+                              kidneyTile("Calcium stones",
+                                  "Most kidney stones are calcium stones, usually in the form of calcium oxalate. Oxalate is a naturally occurring substance found in food and is also made daily by your liver. Some fruits and vegetables, as well as nuts and chocolate, have high oxalate content. Dietary factors, high doses of vitamin D, intestinal bypass surgery and several metabolic disorders can increase the concentration of calcium or oxalate in urine.Calcium stones may also occur in the form of calcium phosphate. This type of stone is more common in metabolic conditions, such as renal tubular acidosis. It may also be associated with certain migraine headaches or with taking certain seizure medications, such as topiramate (Topamax)."),
+                              kidneyTile("Struvite stones",
+                                  "Struvite stones form in response to an infection, such as a urinary tract infection. These stones can grow quickly and become quite large, sometimes with few symptoms or little warning."),
+                              kidneyTile("Uric acid stones",
+                                  "Uric acid stones can form in people who don't drink enough fluids or who lose too much fluid, those who eat a high-protein diet, and those who have gout. Certain genetic factors also may increase your risk of uric acid stones."),
+                              kidneyTile("Cystine stones",
+                                  "These stones form in people with a hereditary disorder that causes the kidneys to excrete too much of certain amino acids (cystinuria)."),
                               ListTile(
                                 title: Text(
                                   "Risk Factors: ",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18),
                                 ),
                               ),
                               kidneyTile("Family or personal history",
@@ -170,6 +237,77 @@ class _HomePageState extends State<HomePage> {
                         ))
                   ])),
         ],
+      ),
+    );
+  }
+
+  Widget _predisposingDialog(
+    String title,
+    String sub,
+    String data,
+  ) {
+    return InkWell(
+      onTap: () {
+        showGeneralDialog(
+            context: context,
+            barrierDismissible: true,
+            barrierLabel:
+                MaterialLocalizations.of(context).modalBarrierDismissLabel,
+            barrierColor: Colors.black45,
+            transitionDuration: const Duration(milliseconds: 200),
+            pageBuilder: (BuildContext buildContext, Animation animation,
+                Animation secondaryAnimation) {
+              return Center(
+                child: Container(
+                  width: MediaQuery.of(context).size.width - 10,
+                  height: MediaQuery.of(context).size.height - 80,
+                  padding: EdgeInsets.all(20),
+                  color: Colors.white,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(data),
+                      RaisedButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Text(
+                          "Back",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        color: const Color(0xFF1BC0C5),
+                      )
+                    ],
+                  ),
+                ),
+              );
+            });
+      },
+      child: Card(
+        elevation: 5.0,
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    title,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  SizedBox(
+                    height: 3,
+                  ),
+                  Text(
+                    sub,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -232,29 +370,30 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget kidneyTile(String heading, String content) {
-    return Card(
-      elevation: 5.0,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 15),
-            child: Text(
-              heading,
-              style: tStyle,
+    return Container(
+      child: Card(
+        margin: EdgeInsets.symmetric(horizontal: 15),
+        elevation: 5.0,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              child: Text(
+                heading,
+                style: tStyle,
+              ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 15),
-            child: Text(
-              content,
-              style: sStyle,
+            SizedBox(
+              height: 10,
             ),
-          )
-        ],
+            Container(
+              child: Text(
+                content,
+                style: sStyle,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

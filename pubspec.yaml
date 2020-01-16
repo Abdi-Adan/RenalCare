@@ -58,6 +58,8 @@ flutter:
     - assets/plate6.png
     - assets/picture.png
     - assets/foods/blueberries.jpg
+    - assets/foods/redgrapes.jpeg
+    - assets/foods/skinless.jpeg
     - assets/foods/cabbage.jpg
     - assets/foods/eggwhite.jpg
     - assets/foods/garlic.jpg

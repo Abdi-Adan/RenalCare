@@ -61,9 +61,12 @@ class _DetailsPageState extends State<DetailsPage> {
                   tag: widget.heroTag,
                   child: Container(
                       decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(40),
+                          ),
                           image: DecorationImage(
                               image: AssetImage(widget.heroTag),
-                              fit: BoxFit.cover)),
+                              fit: BoxFit.fill)),
                       height: 200.0,
                       width: 200.0))),
           Positioned(
@@ -92,6 +95,63 @@ class _DetailsPageState extends State<DetailsPage> {
                                     fontWeight: FontWeight.bold)),
                             SizedBox(height: 20.0),
                             Text(widget.des),
+                            Column(
+                              children: <Widget>[
+                                ListTile(
+                                  title: Text(
+                                    "Sodium",
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                ListTile(
+                                  title: Text(
+                                    "Sodium is found in many foods and a major component of a tavke salt.Damaged kidneys cant filter out excess sodium, causing its blood kevels to rise.its often recommended to limit sodium to less than 2000mg per day.",
+                                    style: TextStyle(fontSize: 14),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: <Widget>[
+                                ListTile(
+                                  title: Text(
+                                    "Potassium",
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                ListTile(
+                                  title: Text(
+                                    "Potassium  plays many critical roles in the body, but those with kidney disease need to limit potassium to avoid  dangerously high blood levels.Its usually recommended to limit potassium to 2000mg per day.",
+                                    style: TextStyle(fontSize: 14),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: <Widget>[
+                                ListTile(
+                                  title: Text(
+                                    "Phosphorus",
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                ListTile(
+                                  title: Text(
+                                    "Damaged kidneys cant remove excess phosphorus, a mineral in many food.High levels  can cause damage to the body, so dietary phosphorus is restricted to less than 800-1000mg per day in most patients.",
+                                    style: TextStyle(fontSize: 14),
+                                  ),
+                                ),
+                              ],
+                            ),
                             SizedBox(height: 20.0),
                             Container(
                                 height: 150.0,

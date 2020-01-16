@@ -64,7 +64,7 @@ class _LifeStylesState extends State<LifeStyles> {
                               ],
                               "blue berries are packed with nutrients and one of the best sources of anti oxidants called anthocyanins, which may protect also protect against heart disease, certain cancers, cognitive decline and diabetes. They also make a fantastic addition to a kidney - friendly diet, as they are low in sodium, phosphorus and pottasium."),
                           _buildFoodItem(
-                              'assets/plate1.png',
+                              'assets/foods/redgrapes.jpeg',
                               'Red Grapes',
                               'they deliver a ton...',
                               [
@@ -144,7 +144,7 @@ class _LifeStylesState extends State<LifeStyles> {
                               ],
                               "Cabbage belongs to the cruciferous vegetable family and is loaded with vitamins, minerals and powerful plant compounds. Its a great source of vitamin k, vitamin c and many B vitamins. Furthermore, it provides  insoluble fiber, a type of fibre that keeps  the digestive system healthy by promoting regular bowel movements and adding bulk stool."),
                           _buildFoodItem(
-                              'assets/plate6.png',
+                              'assets/foods/skinless.jpeg',
                               'Skinless Chicken',
                               'skinless chicken...',
                               [

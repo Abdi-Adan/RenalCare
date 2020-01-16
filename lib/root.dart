@@ -13,8 +13,6 @@ class MyControlScreen extends StatefulWidget {
 }
 
 class _MyControlScreenState extends State<MyControlScreen> {
-
-
   int _page = 0;
   GlobalKey _bottomNavigationKey = GlobalKey();
 
@@ -28,14 +26,6 @@ class _MyControlScreenState extends State<MyControlScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        title: Text(
-          "Renal Kidney Disease",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-        backgroundColor: Colors.cyan,
-      ),
       body: _screens[_page],
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,

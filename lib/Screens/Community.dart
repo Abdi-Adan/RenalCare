@@ -13,6 +13,14 @@ class _CommunityState extends State<Community> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          "Chronic Kidney Disease, (CKD).",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.cyan,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -74,7 +82,7 @@ class _CommunityState extends State<Community> {
               margin: EdgeInsets.symmetric(horizontal: 8),
               alignment: Alignment.center,
               width: MediaQuery.of(context).size.width,
-              height: 200,
+              height: 220,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.fill,
