@@ -116,7 +116,7 @@ class _PreTransplantsState extends State<PreTransplants> {
                     style: tStyle,
                   ),
                   Text(
-                    "If you are on dialysis and have no other health conditions that would increase the risk of surgery, you can receive a transplant. Our team will perform a thorough evaluation to ensure you are a candidate.If your kidney functions at less than 20% and you are not on dialysis, you also can be a candidate for transplant. There generally is no age limit nor weight restrictions for transplant; we can discuss your options.",
+                    "If you are on dialysis and have no other health conditions that would increase the risk of surgery, you can receive a transplant. Our team will perform a thorough evaluation to ensure you are a candidate.If your kidney functions at less than 20% and you are not on dialysis, you also can be a candidate for transplant. The recepients age for receiving a graft is limited to 65 years and below to an age group between 13 to 19 yeears age.Most reports comparing survival of kidney transplant recepients and patients on dialysis are based on registry data from multiple centres and have major limitations. The selection and work up procedures of transplant recepients vary between centres and the same goes for the choice of immunosuppressive protocals and follow up procedures.",
                     style: sStyle,
                   ),
                   SizedBox(
@@ -127,7 +127,7 @@ class _PreTransplantsState extends State<PreTransplants> {
                     style: tStyle,
                   ),
                   Text(
-                    "The kidney can be donated from a deceased person who registered as an organ donor. You also can also receive a kidney from a healthy family member (living related donor) or friend (living unrelated donor). This procedure is referred to as living donor transplantation. Your donor will not compromise their health with one kidney. After donating a kidney, the donor's remaining healthy kidney will grow until it is able to do the work of two kidneys. ",
+                    "The kidney can be donated from a deceased person who registered as an organ donor. You also can also receive a kidney from a healthy family member (living related donor) or friend (living unrelated donor). This procedure is referred to as living donor transplantation. Your donor will not compromise their health with one kidney. After donating a kidney, the donor's remaining healthy kidney will be able to do the work of two kidneys. ",
                     style: sStyle,
                   ),
                   SizedBox(
@@ -220,17 +220,17 @@ class _PostTransplantsState extends State<PostTransplants> {
           ListTile(
             title: Text(
               "(Agents for supporting Post-Transplant patients)",
-              style: TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
             ),
           ),
           postTile("Monitoring",
-              "Rejection is rarely diagnosed the first 5 days post transplant. Follow up is therefore necessary  foor the purpose of acute rejection, in any instances."),
+              "Rejection is rarely diagnosed the first 5 days post transplant. Follow up is therefore necessary  for the purpose of acute rejection, in any instances."),
           postTile("Family Support",
               "Dialysis does not only change the life of the patient, but also the families essential for the family members to learn effective support practices to help with both the emotional development and lifestyle improvement."),
           postTile("Patient Education.",
               "The patient should have knowledge on lifestyle habits; what and what not to eat, knowledge of drug and substance use and precautions."),
           postTile("Immunosuppressants",
-              "There are instances where the medicine can lower the body's ability to reject a transplanted kidney. After the transplant, the body takes the new kidney as foreign as it adjusts o it, and in this, itl will attack the new kidney. The immunosuppressant’s therefore prevents the body from damaging the new organ. While minimizing the side effects"),
+              "There are instances where the medicine can lower the body's ability to reject a transplanted kidney. After the transplant, the body takes the new kidney as foreign as it adjusts to it, and in this it will attack the new kidney. The immunosuppressants therefore prevents the body from damaging the new organ, while minimizing the side effects."),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: ListTile(
@@ -241,7 +241,7 @@ class _PostTransplantsState extends State<PostTransplants> {
             ),
           ),
           postTile("Calcineurin Inhibitors",
-              "These are medicine that inhibits the action of Calcineurin; Calcineurin is the enzyme that activates that activates the T-Cells of the immune system."),
+              "These are medicine that inhibits the action of Calcineurin; Calcineurin is the enzyme that activates the T-Cells of the immune system."),
           postTile("Corticosteroids.",
               "These are drugs that lowers inflammation in the body by reducing the immune system activity. Because the corticosteroids ease swelling, itching and allergic reaction."),
           postTile("Antiproliferative drugs.",
@@ -255,17 +255,8 @@ class _PostTransplantsState extends State<PostTransplants> {
               ),
             ),
           ),
-          postTile("Kenyatta National Hospital",
-              "Ranges from 1.5 Million inclusive of Compatibility testing (costs 200,000 alone) which is done in South Africa after the samples are taken from the patient. Less 500,000 which is covered by NHIF; Totaling to about 1Million for a full transplant"),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: ListTile(
-              title: Text(
-                "The Compatibility testing facility is currently under Construction at KNH.",
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-              ),
-            ),
-          ),
+          postTile("In Kenya,",
+              "Total cost is approximately 1.5 Million inclusive of Compatibility testing (costs 200,000 alone) which is done in South Africa after the samples are taken from the patient. Less 500,000 which is covered by NHIF; Totaling to about 1 Million payable by the patient. The Compatibility testing facility is currently under Construction at KNH."),
         ],
       ),
     ]));

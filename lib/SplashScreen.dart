@@ -27,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
               SizedBox(
                 height: 300,
                 child: CircleAvatar(
-                  backgroundColor: Colors.cyanAccent,
+                  backgroundColor: Colors.white,
                   radius: 100,
                   child: Image.asset("assets/111.png"),
                 ),
@@ -55,6 +55,16 @@ class _SplashPageState extends State<SplashPage> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 100,
+              ),
+              Text(
+                  "Prepared by Dr. Kenneth Onyango.\nkennethonyango25@gmail.com\nTel: +254729251451",
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white
+                  )),
             ],
           ),
         ],

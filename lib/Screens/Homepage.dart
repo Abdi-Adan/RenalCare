@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              "CONTACTS\n\nProf A.J.O Were\nConsultant, Physician, Nephrologist at Nairobi Hospital, KNH, Deputy Director,East African Kidney Institute.\nContact 0722711444 or 0729251451\n\nDr. Mwongera Frank Kamunde\nUpper Hill Medical Centre Nairobi Kidney Centre, 1st Floor +254 20 271 8182\n\nDr. Ahmed Twahir Majid\nParklands Mediplaza, Third Parklands Ave\nTel:020-3752727,3740397, 0733-220834\n\nDr. Kenneth Onyango.\nNephrologist, Nairobi Hospital\nkennethonyango25@gmail.com\nTel: +254729251451",
+                              "CONTACTS\n\nProf A.J.O Were\nConsultant, Physician, Nephrologist at Nairobi Hospital, KNH, Deputy Director,East African Kidney Institute.\nContact 0722711444 or 0729251451\n\nDr. Mwongera Frank Kamunde\nUpper Hill Medical Centre Nairobi Kidney Centre, 1st Floor +254 20 271 8182\n\nDr. Ahmed Twahir Majid\nParklands Mediplaza, Third Parklands Ave\nTel:020-3752727,3740397, 0733-220834\n\n",
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.black,
@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> {
                                   "Vascular access allows removal and return of blood through extracorporeal circuit during hemodialysis for patients with end-stage renal disease"),
                               ListTile(
                                 title: Text(
-                                  "Types of Dialysis: ",
+                                  "Types of Vascular Access: ",
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
