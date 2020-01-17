@@ -84,7 +84,7 @@ class _PreTransplantsState extends State<PreTransplants> {
                   SizedBox(
                     height: 10.0,
                   ),
-                  Text("Dec 21, 2019 by Dr. Ken Ochieng'"),
+                  Text("Dec 21, 2019 by Kenneth Onyango"),
                   Divider(),
                   SizedBox(
                     height: 20.0,
