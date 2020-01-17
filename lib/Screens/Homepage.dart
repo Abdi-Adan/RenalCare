@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              "CONTACTS\n\nProf A.J.O Were\nConsultant, Physician, Nephrologist at Nairobi Hospital, KNH, Deputy Director,East African Kidney Institute.\nContact 0722711444 or 0729251451\nDr. Mwongera Frank Kamunde\nUpper Hill Medical Centre Nairobi Kidney Centre, 1st Floor +254 20 271 8182\nDr. Ahmed Twahir Majid Parklands Mediplaza, Third Parklands Ave Tel:020-3752727,3740397, 0733-220834",
+                              "CONTACTS\n\nProf A.J.O Were\nConsultant, Physician, Nephrologist at Nairobi Hospital, KNH, Deputy Director,East African Kidney Institute.\nContact 0722711444 or 0729251451\n\nDr. Mwongera Frank Kamunde\nUpper Hill Medical Centre Nairobi Kidney Centre, 1st Floor +254 20 271 8182\n\nDr. Ahmed Twahir Majid\nParklands Mediplaza, Third Parklands Ave\nTel:020-3752727,3740397, 0733-220834\n\nDr. Kenneth Onyango.\nNephrologist, Nairobi Hospital\nkennethonyango25@gmail.com\nTel: +254729251451",
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.black,
@@ -134,6 +134,36 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               ),
+                              kidneyTile("Dialysis",
+                                  "Dialysis substitutes the natural work of the kidneys, so it is also known as renal replacement therapy (RRT)"),
+                              ListTile(
+                                title: Text(
+                                  "Types of Dialysis: ",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              kidneyTile("Peritoneal dialysis",
+                                  "Peritoneal dialysis uses the natural filtering ability of the peritoneum, the internal lining of the abdomen, to filter waste products from the blood."),
+                              kidneyTile("Hemodialysis",
+                                  "The blood circulates outside the body. It goes through a machine with special filters. The blood then comes out of the patient through a flexible tube known as a catheter. The tube is inserted into the vein."),
+                              kidneyTile("Vascular Access",
+                                  "Vascular access allows removal and return of blood through extracorporeal circuit during hemodialysis for patients with end-stage renal disease"),
+                              ListTile(
+                                title: Text(
+                                  "Types of Dialysis: ",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              kidneyTile("Arteriovenous Fistula",
+                                  "This is the process where a vein is connected to in order to give access for hemodialysis"),
+                              kidneyTile("Vascular Catheter",
+                                  "Device that allows access to central veins or right atrium at high volume and flow rates"),
+                              kidneyTile("Causes of CKD",
+                                  "-Diabetes\n-High blood pressure\n-Heart Disease"),
+                              kidneyTile("Symptoms",
+                                  "-Itching\n-Blood in urine\n-Swollen feet/Ankles\n-Insomnia"),
+                              kidneyTile("Prevention",
+                                  "-Reduce sodium intake\n-Exercise\nLimit Alcohol intake.\nAvoid smoking and substance abuse\nRegular check-ups"),
                               ListTile(
                                 title: Text(
                                   "Symptomps Include: ",
