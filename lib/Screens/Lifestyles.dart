@@ -206,7 +206,8 @@ class _LifeStylesState extends State<LifeStyles> {
                                 "165G(Unit)",
                                 "13mg(Amount)"
                               ],
-                              "Many tropical fruits like oranges, bananas and kiwis are very high in potassium. Luckily, pineapple makes  a sweet,low potassium alternative for those with kidney problems. Pineapple is rich in fibre, B vitamins, manganese and bromelain, an enzyme that helps reduce inflammation. ")
+                              "Many tropical fruits like oranges, bananas and kiwis are very high in potassium. Luckily, pineapple makes  a sweet,low potassium alternative for those with kidney problems. Pineapple is rich in fibre, B vitamins, manganese and bromelain, an enzyme that helps reduce inflammation. "),
+                              SizedBox(height: 15,),
                         ]))),
               ],
             ),
@@ -255,7 +256,7 @@ class _LifeStylesState extends State<LifeStyles> {
                           fit: BoxFit.fill,
                           image: AssetImage(imgPath),
                         ),
-                        color: Colors.red,
+                        color: Colors.transparent,
                       ),
                     ),
                   ),
@@ -277,9 +278,12 @@ class _LifeStylesState extends State<LifeStyles> {
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => DetailsPage(
-                              heroTag: imgPath,
-                              foodName: foodName,
-                              foodPrice: sub)));
+                                heroTag: imgPath,
+                                foodName: foodName,
+                                foodPrice: sub,
+                                infoCard: infoCard,
+                                des: des,
+                              )));
                     })
               ],
             )));

@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.cyan,
       appBar: AppBar(
         elevation: 0,
-        centerTitle: true,
+        centerTitle: false,
         title: Text(
           "Chronic Kidney Disease",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         actions: <Widget>[
           IconButton(
             icon: Icon(
-              Icons.person,
+              Icons.info,
               color: Colors.white,
             ),
             onPressed: () {
@@ -51,9 +51,11 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              "Prof A.J.O Were\nConsultant, Physician, Nephrologist at Nairobi Hospital, KNH, Deputy Director,East African Kidney Institute.\nContact 0722711444 or 0729251451\nDr. Mwongera Frank Kamunde\nUpper Hill Medical Centre Nairobi Kidney Centre, 1st Floor +254 20 271 8182\nDr. Ahmed Twahir Majid Parklands Mediplaza, Third Parklands Ave Tel:020-3752727,3740397, 0733-220834",
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.black,),
+                              "CONTACTS\n\nProf A.J.O Were\nConsultant, Physician, Nephrologist at Nairobi Hospital, KNH, Deputy Director,East African Kidney Institute.\nContact 0722711444 or 0729251451\nDr. Mwongera Frank Kamunde\nUpper Hill Medical Centre Nairobi Kidney Centre, 1st Floor +254 20 271 8182\nDr. Ahmed Twahir Majid Parklands Mediplaza, Third Parklands Ave Tel:020-3752727,3740397, 0733-220834",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.black,
+                              ),
                             ),
                             SizedBox(height: 20),
                             RaisedButton(
@@ -74,7 +76,7 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           SizedBox(
-            width: 10,
+            width: 15,
           ),
         ],
         backgroundColor: Colors.cyan,
@@ -86,18 +88,18 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.only(left: 40.0),
             child: Row(
               children: <Widget>[
-                Text('What is Renal Disease?',
+                Text('What is CKD?',
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0)),
+                        fontSize: 20.0)),
                 SizedBox(width: 10.0),
               ],
             ),
           ),
           SizedBox(height: 40.0),
           Container(
-              height: MediaQuery.of(context).size.height - 185.0,
+              height: MediaQuery.of(context).size.height - 165.0,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(75.0)),
@@ -124,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                                         height: 10,
                                       ),
                                       Text(
-                                          "Renal Disease is a progressive loss in renal function over a period of time. The organ affected here are the Kidneys. This condition is also knowna as Renal Chronic Disease (CKD)."),
+                                          "Chronic Kidney Disease is a progressive loss in renal function over a period of time. The organ affected here are the Kidneys."),
                                       SizedBox(
                                         height: 10,
                                       ),
@@ -140,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               _listWidgetTile(
                                 "Urination Problems",
-                                "Those who suffer from Chronic\nKidney Disease (CKD) often\ncomplain of the increased urge\nto urinate or decreased amount\nof urine\n ",
+                                "Those who suffer from Chronic\nKidney Disease (CKD) often\ncomplain of the increased urge\nto urinate or decreased amount\nof urine.\n ",
                                 Icon(
                                   Icons.accessible_forward,
                                   color: color,
@@ -149,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               _listWidgetTile(
                                 "Edema",
-                                "Swelling of extremities, majorly\nlegs due to water retention. It\ncan also manifest in eyes\npuffiness and swollen legs\n",
+                                "Swelling of extremities, majorly\nlegs due to water retention. It\ncan also manifest in eyes\npuffiness and swollen legs.\n",
                                 Icon(
                                   Icons.accessibility,
                                   color: color,
@@ -158,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               _listWidgetTile(
                                 "Urine Changes",
-                                'as the kidneys looses the\nability to work properly  there\nare noticable changes in\nurine colour, shade or smell.\n',
+                                'As the kidneys looses the\nability to work properly  there\nare noticable changes in\nurine colour, shade or smell.\n',
                                 Icon(
                                   Icons.gesture,
                                   color: color,
@@ -167,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               _listWidgetTile(
                                 "Extreme Fatigue",
-                                "the moment the  normal\nfunction of kidneys are\naltered and cant remove\nwaste from body as needed\nfatigue sets in\n",
+                                "The moment the  normal\nfunction of kidneys are\naltered and can't remove\nwaste from the body as\nneeded fatigue sets in.\n",
                                 Icon(
                                   Icons.directions_walk,
                                   color: color,
@@ -176,8 +178,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               _predisposingDialog(
                                   "Predisposing factors:",
-                                  "diseases, conditions and agents  that may\nlead or leads to renal diseases include:\n ",
-                                  "1. Blood clots in the veins and arteries in and around the kidneys.\n2. Cholesreral deposits that block blood flow in the kidneys.\n3. Glomerulonephritis ( inflammation of the tiny filtersin the kidneys)\n4. Haemolytic uremic syndrome\n5. Some infections.\n6. Conditions such as diabetes, and high blood pressure are the major culprit in ( ckd)\n7. Obesity , has also been shown to be  a risk factor ( ckd)\n8. Lower levels of klotho protein in blood stream of both animals and human beings was found to have a correlation with(ckd)."),
+                                  "Diseases, conditions and agents  that may\nlead or leads to renal diseases include:\n ",
+                                  "1. Blood clots in the veins and arteries in and around the kidneys.\n2. Cholesreral deposits that block blood flow in the kidneys.\n3. Glomerulonephritis (Inflammation of the tiny filters in the kidneys)\n4. Haemolytic Uremic Syndrome\n5. Some infections.\n6. Conditions such as diabetes, and high blood pressure are the major culprits in (CKD)\n7. Obesity has also been shown to be  a risk factor\n8. Lower levels of klotho protein in the blood stream of both animals and human beings was found to have a correlation."),
                               ListTile(
                                 title: Text(
                                   "Kidney Stones",
@@ -191,9 +193,9 @@ class _HomePageState extends State<HomePage> {
                                 height: 10,
                               ),
                               kidneyTile("Kidney Stones",
-                                  "Kidney stones (renal lithiasis, nephrolithiasis) are hard deposits made of minerals and salts that form inside your kidneys. Kidney stones have many causes and can affect any part of your urinary tract — from your kidneys to your bladder. Often, stones form when the urine becomes concentrated, allowing minerals to crystallize and stick together. Passing kidney stones can be quite painful, but the stones usually cause no permanent damage if they're recognized in a timely fashion. Depending on your situation, you may need nothing more than to take pain medication and drink lots of water to pass a kidney stone. In other instances — for example, if stones become lodged in the urinary tract, are associated with a urinary infection or cause complications — surgery may be needed. Your doctor may recommend preventive treatment to reduce your risk of recurrent kidney stones if you're at increased risk of developing them again"),
+                                  "Kidney stones (renal lithiasis, nephrolithiasis) are hard deposits made of minerals and salts that form inside your kidneys. Kidney stones have many causes and can affect any part of your urinary tract, from your kidneys to your bladder. Often, stones form when the urine becomes concentrated, allowing minerals to crystallize and stick together. Passing kidney stones can be quite painful, but the stones usually cause no permanent damage if they're recognized in a timely fashion. Depending on your situation, you may need nothing more than to take pain medication and drink lots of water to pass a kidney stone. In other instances for example, if stones become lodged in the urinary tract, are associated with a urinary infection or cause complications surgery may be needed. Your doctor may recommend preventive treatment to reduce your risk of recurrent kidney stones if you're at increased risk of developing them again"),
                               kidneyTile("Signs and Symptoms",
-                                  "Sharp pains in your back, side, lower abdomen, or groin\npink, red, or brown blood in your urine, also called hematuria\na constant need to urinate\npain while urinating\ninability to urinate or can only urinate a small amount\ncloudy or bad-smelling urine"),
+                                  "-Sharp pains in your back-side, lower abdomen, or groin.\n-Pink, red, or brown blood in your urine, also called hematuria.\nA constant need to urinate.\n-Pain while urinating.\n-Inability to urinate or can only urinate a small amount.\n-Cloudy or bad-smelling urine"),
                               ListTile(
                                 title: Text(
                                   "Types of Kidney Stones ",
@@ -203,7 +205,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               kidneyTile("Calcium stones",
-                                  "Most kidney stones are calcium stones, usually in the form of calcium oxalate. Oxalate is a naturally occurring substance found in food and is also made daily by your liver. Some fruits and vegetables, as well as nuts and chocolate, have high oxalate content. Dietary factors, high doses of vitamin D, intestinal bypass surgery and several metabolic disorders can increase the concentration of calcium or oxalate in urine.Calcium stones may also occur in the form of calcium phosphate. This type of stone is more common in metabolic conditions, such as renal tubular acidosis. It may also be associated with certain migraine headaches or with taking certain seizure medications, such as topiramate (Topamax)."),
+                                  "Most kidney stones are calcium stones, usually in the form of calcium oxalate. Oxalate is a naturally occurring substance found in food and is also made daily by your liver. Some fruits and vegetables, as well as nuts and chocolate, have high oxalate content. Dietary factors, high doses of vitamin D, intestinal bypass surgery and several metabolic disorders can increase the concentration of calcium or oxalate in urine. Calcium stones may also occur in the form of calcium phosphate. This type of stone is more common in metabolic conditions, such as renal tubular acidosis. It may also be associated with certain migraine headaches or with taking certain seizure medications, such as topiramate (Topamax)."),
                               kidneyTile("Struvite stones",
                                   "Struvite stones form in response to an infection, such as a urinary tract infection. These stones can grow quickly and become quite large, sometimes with few symptoms or little warning."),
                               kidneyTile("Uric acid stones",
@@ -302,7 +304,7 @@ class _HomePageState extends State<HomePage> {
       child: Card(
         elevation: 5.0,
         child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -336,7 +338,7 @@ class _HomePageState extends State<HomePage> {
     return Card(
       elevation: 5.0,
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 10),
+        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[

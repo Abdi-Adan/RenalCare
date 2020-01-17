@@ -32,7 +32,7 @@ class _StoriesState extends State<Stories> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
           child: Text(widget.storyDetails),
         ),
       ),
