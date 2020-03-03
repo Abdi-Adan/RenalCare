@@ -15,7 +15,7 @@ class _TransplantsState extends State<Transplants> {
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
-                text: "Pre-Transplants,",
+                text: "Pre-Transplants",
               ),
               Tab(
                 text: "Post-Transplants",
