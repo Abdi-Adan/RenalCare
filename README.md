@@ -1,5 +1,7 @@
 # RenalCare
 
+![playstorelogo](https://user-images.githubusercontent.com/53440762/77236522-5e702980-6bd0-11ea-979b-6ea7297ce631.png)
+
 Mobile app for sensitizing the public on matters Health and better care for kidneys. It has information regarding how to prevent Chronic Renal Kidney Disease, lifestyle advice, transplant details and community testimonials.
 
 ![home](https://user-images.githubusercontent.com/53440762/77236117-8e1d3280-6bcc-11ea-979f-35aed9b6d16f.png?raw=true "Home")
